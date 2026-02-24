@@ -31,6 +31,8 @@ OpenClaw 多智能体配置说明与示例，遵循 [OpenClaw Multi-Agent](https
 
 ## 目录
 
+- **[OpenClaw 使用系列](docs/README.md)** — 实战场景文章（如 [Claw + Obsidian 复工外脑](docs/01-claw-obsidian-复工外脑.md)）
+
 1. [系统要求与安装](#1-系统要求与安装)
 2. [快速开始与首次配置](#2-快速开始与首次配置)
 3. [多网关（同一主机多组智能体）](#3-多网关同一主机多组智能体)
@@ -921,6 +923,7 @@ curl -fsSL https://openclaw.ai/uninstall.sh | bash
 
 ## 14. 相关链接
 
+- **[OpenClaw 使用系列](docs/README.md)** — 场景化实战（Claw + Obsidian 外脑等）
 - [OpenClaw 官方文档](https://docs.openclaw.ai)
 - [CLI Reference](https://docs.openclaw.ai/cli) — 命令与全局选项（`--profile`、`--dev`、`gateway`、`agents`、`channels` 等）
 - [Multi-Agent Routing](https://docs.openclaw.ai/concepts/multi-agent)

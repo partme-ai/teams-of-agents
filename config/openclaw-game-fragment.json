@@ -1,8 +1,12 @@
 {
   "agents": {
     "defaults": {
-      "model": { "primary": "YOUR_DEFAULT_MODEL" },
-      "compaction": { "mode": "safeguard" }
+      "model": {
+        "primary": "YOUR_DEFAULT_MODEL"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      }
     },
     "list": [
       {
@@ -29,17 +33,39 @@
         "name": "Game Developer",
         "workspace": "~/.openclaw/workspace-game/game-developer",
         "agentDir": "~/.openclaw/agents/game-developer/agent"
+      },
+      {
+        "id": "game-ops",
+        "name": "Game Ops",
+        "workspace": "~/.openclaw/workspace-game/game-ops",
+        "agentDir": "~/.openclaw/agents/game-ops/agent"
       }
     ]
   },
   "bindings": [
-    { "agentId": "game-master", "match": { "channel": "telegram" } },
-    { "agentId": "game-master", "match": { "channel": "discord" } }
+    {
+      "agentId": "game-master",
+      "match": {
+        "channel": "telegram"
+      }
+    },
+    {
+      "agentId": "game-master",
+      "match": {
+        "channel": "discord"
+      }
+    }
   ],
   "tools": {
     "agentToAgent": {
       "enabled": true,
-      "allow": ["game-master", "game-designer", "game-architect", "game-developer"]
+      "allow": [
+        "game-master",
+        "game-designer",
+        "game-architect",
+        "game-developer",
+        "game-ops"
+      ]
     }
   }
 }

@@ -1,8 +1,12 @@
 {
   "agents": {
     "defaults": {
-      "model": { "primary": "YOUR_DEFAULT_MODEL" },
-      "compaction": { "mode": "safeguard" }
+      "model": {
+        "primary": "YOUR_DEFAULT_MODEL"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      }
     },
     "list": [
       {
@@ -83,12 +87,28 @@
         "name": "运维工程师",
         "workspace": "~/.openclaw/workspace-it/ops-engineer",
         "agentDir": "~/.openclaw/agents/ops-engineer/agent"
+      },
+      {
+        "id": "data-analyst",
+        "name": "数据分析师",
+        "workspace": "~/.openclaw/workspace-it/data-analyst",
+        "agentDir": "~/.openclaw/agents/data-analyst/agent"
       }
     ]
   },
   "bindings": [
-    { "agentId": "technical-director", "match": { "channel": "telegram" } },
-    { "agentId": "technical-director", "match": { "channel": "discord" } }
+    {
+      "agentId": "technical-director",
+      "match": {
+        "channel": "telegram"
+      }
+    },
+    {
+      "agentId": "technical-director",
+      "match": {
+        "channel": "discord"
+      }
+    }
   ],
   "tools": {
     "agentToAgent": {
@@ -106,7 +126,8 @@
         "frontend-engineer",
         "mobile-engineer",
         "qa-engineer",
-        "ops-engineer"
+        "ops-engineer",
+        "data-analyst"
       ]
     }
   }

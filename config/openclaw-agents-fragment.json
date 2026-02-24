@@ -1,28 +1,135 @@
 {
   "agents": {
     "defaults": {
-      "model": { "primary": "YOUR_DEFAULT_MODEL" },
-      "compaction": { "mode": "safeguard" }
+      "model": {
+        "primary": "YOUR_DEFAULT_MODEL"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      }
     },
     "list": [
-      { "id": "main", "default": true, "name": "主编排", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-main", "agentDir": "~/.openclaw/agents/main/agent" },
-      { "id": "pm", "name": "产品", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-pm", "agentDir": "~/.openclaw/agents/pm/agent" },
-      { "id": "design", "name": "设计", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-design", "agentDir": "~/.openclaw/agents/design/agent" },
-      { "id": "dev", "name": "开发", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-dev", "agentDir": "~/.openclaw/agents/dev/agent" },
-      { "id": "ops", "name": "运维", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-ops", "agentDir": "~/.openclaw/agents/ops/agent" },
-      { "id": "blog", "name": "博客", "workspace": "<REPO_ROOT>/openclaw-agents/blog/partme-blog", "agentDir": "~/.openclaw/agents/blog/agent" },
-      { "id": "project-manager", "name": "项目经理", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-project-manager", "agentDir": "~/.openclaw/agents/project-manager/agent" },
-      { "id": "product-manager", "name": "产品经理", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-product-manager", "agentDir": "~/.openclaw/agents/product-manager/agent" },
-      { "id": "system-architect", "name": "系统架构师", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-system-architect", "agentDir": "~/.openclaw/agents/system-architect/agent" },
-      { "id": "domain-expert", "name": "领域专家", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-domain-expert", "agentDir": "~/.openclaw/agents/domain-expert/agent" },
-      { "id": "ux-designer", "name": "UED设计师", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-ux-designer", "agentDir": "~/.openclaw/agents/ux-designer/agent" },
-      { "id": "ui-designer", "name": "UI设计师", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-ui-designer", "agentDir": "~/.openclaw/agents/ui-designer/agent" },
-      { "id": "backend-engineer", "name": "后端工程师", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-backend-engineer", "agentDir": "~/.openclaw/agents/backend-engineer/agent" },
-      { "id": "database-engineer", "name": "数据库工程师", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-database-engineer", "agentDir": "~/.openclaw/agents/database-engineer/agent" },
-      { "id": "frontend-engineer", "name": "前端工程师", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-frontend-engineer", "agentDir": "~/.openclaw/agents/frontend-engineer/agent" },
-      { "id": "mobile-engineer", "name": "移动开发工程师", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-mobile-engineer", "agentDir": "~/.openclaw/agents/mobile-engineer/agent" },
-      { "id": "qa-engineer", "name": "测试工程师", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-qa-engineer", "agentDir": "~/.openclaw/agents/qa-engineer/agent" },
-      { "id": "ops-engineer", "name": "运维工程师", "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-ops-engineer", "agentDir": "~/.openclaw/agents/ops-engineer/agent" }
+      {
+        "id": "main",
+        "default": true,
+        "name": "主编排",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-main",
+        "agentDir": "~/.openclaw/agents/main/agent"
+      },
+      {
+        "id": "pm",
+        "name": "产品",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-pm",
+        "agentDir": "~/.openclaw/agents/pm/agent"
+      },
+      {
+        "id": "design",
+        "name": "设计",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-design",
+        "agentDir": "~/.openclaw/agents/design/agent"
+      },
+      {
+        "id": "dev",
+        "name": "开发",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-dev",
+        "agentDir": "~/.openclaw/agents/dev/agent"
+      },
+      {
+        "id": "ops",
+        "name": "运维",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-ops",
+        "agentDir": "~/.openclaw/agents/ops/agent"
+      },
+      {
+        "id": "blog",
+        "name": "博客",
+        "workspace": "<REPO_ROOT>/openclaw-agents/blog/partme-blog",
+        "agentDir": "~/.openclaw/agents/blog/agent"
+      },
+      {
+        "id": "project-manager",
+        "name": "项目经理",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-project-manager",
+        "agentDir": "~/.openclaw/agents/project-manager/agent"
+      },
+      {
+        "id": "product-manager",
+        "name": "产品经理",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-product-manager",
+        "agentDir": "~/.openclaw/agents/product-manager/agent"
+      },
+      {
+        "id": "system-architect",
+        "name": "系统架构师",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-system-architect",
+        "agentDir": "~/.openclaw/agents/system-architect/agent"
+      },
+      {
+        "id": "domain-expert",
+        "name": "领域专家",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-domain-expert",
+        "agentDir": "~/.openclaw/agents/domain-expert/agent"
+      },
+      {
+        "id": "ux-designer",
+        "name": "UED设计师",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-ux-designer",
+        "agentDir": "~/.openclaw/agents/ux-designer/agent"
+      },
+      {
+        "id": "ui-designer",
+        "name": "UI设计师",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-ui-designer",
+        "agentDir": "~/.openclaw/agents/ui-designer/agent"
+      },
+      {
+        "id": "backend-engineer",
+        "name": "后端工程师",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-backend-engineer",
+        "agentDir": "~/.openclaw/agents/backend-engineer/agent"
+      },
+      {
+        "id": "database-engineer",
+        "name": "数据库工程师",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-database-engineer",
+        "agentDir": "~/.openclaw/agents/database-engineer/agent"
+      },
+      {
+        "id": "frontend-engineer",
+        "name": "前端工程师",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-frontend-engineer",
+        "agentDir": "~/.openclaw/agents/frontend-engineer/agent"
+      },
+      {
+        "id": "mobile-engineer",
+        "name": "移动开发工程师",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-mobile-engineer",
+        "agentDir": "~/.openclaw/agents/mobile-engineer/agent"
+      },
+      {
+        "id": "qa-engineer",
+        "name": "测试工程师",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-qa-engineer",
+        "agentDir": "~/.openclaw/agents/qa-engineer/agent"
+      },
+      {
+        "id": "ops-engineer",
+        "name": "运维工程师",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/partme-ops-engineer",
+        "agentDir": "~/.openclaw/agents/ops-engineer/agent"
+      },
+      {
+        "id": "data-analyst",
+        "name": "数据分析师",
+        "workspace": "<REPO_ROOT>/openclaw-agents/it/14-data-analyst",
+        "agentDir": "~/.openclaw/agents/data-analyst/agent"
+      },
+      {
+        "id": "game-ops",
+        "name": "游戏运营",
+        "workspace": "<REPO_ROOT>/openclaw-agents/game/5-game-ops",
+        "agentDir": "~/.openclaw/agents/game-ops/agent"
+      }
     ]
   },
   "bindings": [],
@@ -30,10 +137,25 @@
     "agentToAgent": {
       "enabled": false,
       "allow": [
-        "pm", "design", "dev", "ops", "blog",
-        "project-manager", "product-manager", "system-architect", "domain-expert",
-        "ux-designer", "ui-designer", "backend-engineer", "database-engineer",
-        "frontend-engineer", "mobile-engineer", "qa-engineer", "ops-engineer"
+        "pm",
+        "design",
+        "dev",
+        "ops",
+        "blog",
+        "project-manager",
+        "product-manager",
+        "system-architect",
+        "domain-expert",
+        "ux-designer",
+        "ui-designer",
+        "backend-engineer",
+        "database-engineer",
+        "frontend-engineer",
+        "mobile-engineer",
+        "qa-engineer",
+        "ops-engineer",
+        "data-analyst",
+        "game-ops"
       ]
     }
   }

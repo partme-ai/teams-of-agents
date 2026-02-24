@@ -116,6 +116,7 @@ The Technical Director is the **orchestrator** of the it subagents: for complex,
 | `mobile-engineer` | Mobile Engineer | Native/cross-platform, performance, testing, app store |
 | `qa-engineer` | QA Engineer | Test strategy, cases, automation, performance testing, defect management |
 | `ops-engineer` | Ops Engineer | CI/CD, release, monitoring, logging, incident, capacity, IaC |
+| `data-analyst` | Data Analyst | Intelligence gathering, data analysis, trends, risk summary, visualization suggestions (数据分析师) |
 | `technical-writer` | Technical Writer | Docs, API docs, tutorials, release notes (if available) |
 | `security-engineer` | Security Engineer | Security review, compliance, hardening, vulnerability management (if available) |
 
