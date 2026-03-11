@@ -495,7 +495,7 @@ The repo’s `config/openclaw-it-fragment.json` defines a **software dev team**:
 | `TOOLS.md` | Tool usage | Change tool config |
 | `IDENTITY.md` | Identity | Optional |
 
-**Language**: Agent description files (`AGENTS.md`, `SOUL.md`, `IDENTITY.md`) are in **English** for OpenClaw system prompt injection. Optional `AGENTS.zh-CN.md`, `SOUL.zh-CN.md` in the same directory provide Chinese reference (not injected). See [OpenClaw System Prompt](https://docs.openclaw.ai/concepts/system-prompt).
+**Language**: Agent description files (`AGENTS.md`, `SOUL.md`, `IDENTITY.md`) are in **English** for OpenClaw system prompt injection. Optional Chinese versions live in a `zh-CN/` subdirectory with the same filenames (`AGENTS.md`, `SOUL.md`, `IDENTITY.md`, etc.) for team reading and for copying the whole directory into business workspaces. See [OpenClaw System Prompt](https://docs.openclaw.ai/concepts/system-prompt).
 
 ### Changing channel bindings
 

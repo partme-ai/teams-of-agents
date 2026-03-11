@@ -66,4 +66,4 @@ This doc summarizes what to adopt from the **generic workspace AGENTS.md templat
 
 ---
 
-**Dual-language convention:** Provide `AGENTS.md` (English, primary for OpenClaw prompt injection) and `AGENTS.zh-CN.md` (Chinese, for team reading). Keep content equivalent.
+**Dual-language convention:** Provide `AGENTS.md` (English, primary for OpenClaw prompt injection) and `zh-CN/AGENTS.md` (Chinese, for team reading). Keep content equivalent; the `zh-CN/` directory can be copied as-is into business workspaces.

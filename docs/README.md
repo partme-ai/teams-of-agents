@@ -22,6 +22,6 @@
 
 *更多智能体配置与多 Agent 路由见仓库根目录 [README.md](../README.md)。*
 
-**AGENTS.md 模板启发与优化：** 通用工作区 AGENTS 模板的采纳要点与对现有智能体的优化建议见 [AGENTS-template-inspiration.md](./AGENTS-template-inspiration.md)（英文）、[AGENTS-template-inspiration.zh-CN.md](./AGENTS-template-inspiration.zh-CN.md)（中文）。
+**AGENTS.md 模板启发与优化：** 通用工作区 AGENTS 模板的采纳要点与对现有智能体的优化建议见 [AGENTS-template-inspiration.md](./AGENTS-template-inspiration.md)（英文）、[zh-CN/AGENTS-template-inspiration.md](./zh-CN/AGENTS-template-inspiration.md)（中文）。
 
-**HEARTBEAT 模板：** 心跳任务说明与「心跳 vs Cron」使用指引见 [HEARTBEAT-template.md](./HEARTBEAT-template.md)（英文）、[HEARTBEAT-template.zh-CN.md](./HEARTBEAT-template.zh-CN.md)（中文）。
+**HEARTBEAT 模板：** 心跳任务说明与「心跳 vs Cron」使用指引见 [HEARTBEAT-template.md](./HEARTBEAT-template.md)（英文）、[zh-CN/HEARTBEAT-template.md](./zh-CN/HEARTBEAT-template.md)（中文）。

@@ -467,7 +467,7 @@ openclaw channels status --probe
 | `TOOLS.md` | 工具使用说明 | 修改工具配置 |
 | `IDENTITY.md` | 身份信息 | 可选 |
 
-**语言约定**：智能体描述文件（`AGENTS.md`、`SOUL.md`、`IDENTITY.md`）以**英文**为准，便于 OpenClaw 系统提示词注入与模型遵循。可选在同一目录下提供 `AGENTS.zh-CN.md`、`SOUL.zh-CN.md` 作中文对照（不参与注入，便于团队阅读）。参见 [OpenClaw System Prompt](https://docs.openclaw.ai/concepts/system-prompt)。
+**语言约定**：智能体描述文件（`AGENTS.md`、`SOUL.md`、`IDENTITY.md`）以**英文**为准，便于 OpenClaw 系统提示词注入与模型遵循。可选在智能体目录下提供 `zh-CN/` 子目录，其中放置同名中文版（`AGENTS.md`、`SOUL.md`、`IDENTITY.md` 等），不参与注入，便于团队阅读及整目录拷贝到业务使用。参见 [OpenClaw System Prompt](https://docs.openclaw.ai/concepts/system-prompt)。
 
 ### 修改渠道绑定
 
