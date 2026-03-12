@@ -7,7 +7,7 @@
 | 来源 | 搜索链接 | 技能一览文档 | 安装命令 |
 |------|----------|--------------|----------|
 | **ClawHub（若有）** | [clawhub.ai/skills?q=baijiahao](https://clawhub.ai/skills?sort=downloads&q=baijiahao) | [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) | `clawhub install <slug>` |
-| **skills.sh（取最优）** | [skills.sh/?q=baoyu](https://skills.sh/?q=baoyu) | [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md) | `npx skills add <owner/repo> --skill <名>` |
+| **skills.sh（取最优）** | [skills.sh/?q=baoyu](https://skills.sh/?q=baoyu) | 见下方技能表与安装方式 | `npx skills add <owner/repo> --skill <名>` |
 
 ## 必须保证的七个环节
 
@@ -25,12 +25,12 @@
 
 | 序号 | Agent id                    | 展示名           | 目录                         | 职责摘要 |
 |------|-----------------------------|------------------|------------------------------|----------|
-| 1    | baijiahao-viral-breakdown   | 百家号爆款拆解   | 1-baijiahao-viral-breakdown  | 搜索百家号/百度系热点与爆款，产出拆解框架 |
-| 2    | baijiahao-rewrite           | 百家号二创       | 2-baijiahao-rewrite          | 根据拆解框架与主题创作新文案与配图 |
-| 3    | baijiahao-publisher         | 百家号自动发布   | 3-baijiahao-publisher        | 将已通过草稿发布到百家号并记录结果 |
-| 4    | baijiahao-data-assistant    | 百家号数据助手   | 4-baijiahao-data-assistant   | 解析数据、交叉验证效果、反馈给爆款拆解 |
-| 5    | baijiahao-hot-monitor       | 百家号热门监控   | 5-baijiahao-hot-monitor      | 每日/按需搜索百家号/百度系热点与爆款，产出日报或摘要供拆解与数据助手 |
-| 6    | baijiahao-write             | 百家号写作       | 6-baijiahao-write            | 强调原创：用户主图+热点/爆款做原创内容，产出草稿供发布与数据助手 |
+| 1    | baijiahao-hot-monitor       | 百家号热门监控   | 1-baijiahao-hot-monitor      | 每日/按需搜索百家号/百度系热点与爆款，产出日报或摘要供拆解与数据助手 |
+| 2    | baijiahao-viral-breakdown   | 百家号爆款拆解   | 2-baijiahao-viral-breakdown  | 搜索百家号/百度系热点与爆款，产出拆解框架 |
+| 3    | baijiahao-rewrite           | 百家号二创       | 3-baijiahao-rewrite          | 根据拆解框架与主题创作新文案与配图 |
+| 4    | baijiahao-write             | 百家号写作       | 4-baijiahao-write            | 强调原创：用户主图+热点/爆款做原创内容，产出草稿供发布与数据助手 |
+| 5    | baijiahao-publisher         | 百家号自动发布   | 5-baijiahao-publisher        | 将已通过草稿发布到百家号并记录结果 |
+| 6    | baijiahao-data-assistant    | 百家号数据助手   | 6-baijiahao-data-assistant   | 解析数据、交叉验证效果、反馈给爆款拆解 |
 | 7    | baijiahao-comment-manager   | 百家号评论管理   | 7-baijiahao-comment-manager  | 评论采集、起草回复、情感分析；回复需审批/门禁后发布 |
 
 ## 智能工作执行链路
@@ -65,7 +65,7 @@
 
 ### 安装方式（建议按链路顺序安装）
 
-见 [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md)。百家号发布当前多依赖浏览器自动化或百家号开放平台 API，技能以 baoyu 系列与通用抓取为主。**勿在 TOOLS.md 存凭证。**
+安装：`npx skills add <owner/repo> --skill <名>`；技能列表见下方。百家号发布当前多依赖浏览器自动化或百家号开放平台 API，技能以 baoyu 系列与通用抓取为主。**勿在 TOOLS.md 存凭证。**
 
 ```bash
 # 步骤 1、2：监控与拆解

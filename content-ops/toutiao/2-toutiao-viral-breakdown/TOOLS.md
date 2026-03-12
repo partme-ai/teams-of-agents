@@ -23,4 +23,4 @@ Output breakdowns with consistent fields for 二创 and data assistant:
 - **baoyu-url-to-markdown**: Fetch Toutiao URLs to Markdown. Install: `npx skills add jimliu/baoyu-skills --skill baoyu-url-to-markdown`.
 - **baoyu-format-markdown**: Normalize breakdown report format. Install: `npx skills add jimliu/baoyu-skills --skill baoyu-format-markdown`.
 
-See [SKILLS-SH-SKILLS.md](../SKILLS-SH-SKILLS.md) and [CLAWHUB-SKILLS.md](../CLAWHUB-SKILLS.md). Never store credentials here.
+Install: `npx skills add <owner/repo> --skill <name>` (skills.sh) or `clawhub install <slug>` (ClawHub). Skill list: see this platform README. Never store credentials here.

@@ -38,7 +38,7 @@
       },
       {
         "id": "xiaohongshu-write",
-        "name": "小红书写作",
+        "name": "小红书原创",
         "workspace": "~/.openclaw/workspace-xiaohongshu-write",
         "agentDir": "~/.openclaw/agents/xiaohongshu-write/agent",
         "skills": ["baoyu-xhs-images", "baoyu-cover-image", "baoyu-article-illustrator"]

@@ -13,6 +13,6 @@
 ## 技能（ClawHub 优先，skills.sh 后补）
 
 - **ClawHub**：在 [clawhub.ai/skills?q=xiaohongshu](https://clawhub.ai/skills?sort=downloads&q=xiaohongshu) 搜索小红书监控/搜索类技能。
-- **skills.sh**：**baoyu-url-to-markdown** 抓取链接成文；**baoyu-format-markdown** 规范报告格式。安装见 [SKILLS-SH-SKILLS.md](../../SKILLS-SH-SKILLS.md)。
+- **skills.sh**：**baoyu-url-to-markdown** 抓取链接成文；**baoyu-format-markdown** 规范报告格式。安装：`npx skills add <owner/repo> --skill <技能名>`（skills.sh）或 `clawhub install <slug>`（ClawHub）。技能列表见本平台 README。
 
 勿在此存储凭证。

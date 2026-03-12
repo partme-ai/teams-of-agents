@@ -9,10 +9,10 @@
 | 来源 | 搜索链接 | 技能一览文档 | 安装命令 |
 |------|----------|--------------|----------|
 | **ClawHub（优先）** | [clawhub.ai/skills?q=xiaohongshu](https://clawhub.ai/skills?sort=downloads&q=xiaohongshu) | [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) | `clawhub install <slug>` |
-| **skills.sh（后补）** | [skills.sh/?q=xiaohongshu](https://skills.sh/?q=xiaohongshu)、[skills.sh/?q=baoyu](https://skills.sh/?q=baoyu) | [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md) | `npx skills add <owner/repo> --skill <名>` |
+| **skills.sh（后补）** | [skills.sh/?q=xiaohongshu](https://skills.sh/?q=xiaohongshu)、[skills.sh/?q=baoyu](https://skills.sh/?q=baoyu) | 见下方技能表与安装方式 | `npx skills add <owner/repo> --skill <名>` |
 
 - **ClawHub**：优先在 ClawHub 选用小红书相关技能并写在各智能体 TOOLS.md 中；完整列表见 [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md)。
-- **skills.sh**：ClawHub 未覆盖时从 skills.sh 补充；小红书专项见 [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md)，Baoyu 系列（baoyu-xhs-images、baoyu-cover-image、baoyu-article-illustrator、baoyu-url-to-markdown、baoyu-format-markdown、baoyu-compress-image）见 [jimliu/baoyu-skills](https://skills.sh/?q=baoyu)。
+- **skills.sh**：ClawHub 未覆盖时从 skills.sh 补充；安装：`npx skills add <owner/repo> --skill <名>`；小红书专项可查 [skills.sh/?q=xiaohongshu](https://skills.sh/?q=xiaohongshu)，Baoyu 系列（baoyu-xhs-images、baoyu-cover-image、baoyu-article-illustrator、baoyu-url-to-markdown、baoyu-format-markdown、baoyu-compress-image）见 [jimliu/baoyu-skills](https://skills.sh/?q=baoyu)；技能列表与安装示例见下方。
 - **全仓库技能总览与 Baoyu 归类**见 [docs/SKILLS-MASTER.md](../../docs/SKILLS-MASTER.md)。
 
 ## 智能体清单
@@ -49,7 +49,7 @@
 
 ## 预设技能（ClawHub 优先，skills.sh 后补）
 
-各 agent 的 `skills` 可在 [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) 与 [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md) 中按职责选用。以下按 **智能工作执行链路** 顺序列出（1→2→3a→3b→4→5→6）：
+各 agent 的 `skills` 可在 [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) 与下方技能表按职责选用。以下按 **智能工作执行链路** 顺序列出（1→2→3a→3b→4→5→6）：
 
 | 步骤 | Agent id                      | 默认技能列表（skills.sh 后补） | 用途说明 |
 |------|-------------------------------|--------------------------------|----------|
@@ -70,7 +70,7 @@ clawhub search xiaohongshu
 clawhub install <slug>
 ```
 
-**来源：skills.sh** — 小红书专项见 [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md)；Baoyu 后补按 **执行链路对应智能体** 顺序安装（先 1 监控/2 拆解，再 3a 二创/3b 原创，再 4 发布、5 数据、6 评论）：
+**来源：skills.sh** — 安装：`npx skills add <owner/repo> --skill <名>`；Baoyu 后补按 **执行链路对应智能体** 顺序安装（先 1 监控/2 拆解，再 3a 二创/3b 原创，再 4 发布、5 数据、6 评论）：
 
 ```bash
 # 步骤 1、2：监控与拆解

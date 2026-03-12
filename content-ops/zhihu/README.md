@@ -7,7 +7,7 @@
 | 来源 | 搜索链接 | 技能一览文档 | 安装命令 |
 |------|----------|--------------|----------|
 | **ClawHub（若有）** | [clawhub.ai/skills?q=zhihu](https://clawhub.ai/skills?sort=downloads&q=zhihu) | [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) | `clawhub install <slug>` |
-| **skills.sh（取最优）** | [skills.sh/?q=zhihu](https://skills.sh/?q=zhihu)、[skills.sh/?q=baoyu](https://skills.sh/?q=baoyu) | [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md) | `npx skills add <owner/repo> --skill <名>` |
+| **skills.sh（取最优）** | [skills.sh/?q=zhihu](https://skills.sh/?q=zhihu)、[skills.sh/?q=baoyu](https://skills.sh/?q=baoyu) | 见下方技能表与安装方式 | `npx skills add <owner/repo> --skill <名>` |
 
 ## 必须保证的七个环节
 
@@ -53,7 +53,7 @@
 
 ## 预设技能（按执行链路顺序）
 
-**技能一览**见 [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md)、[SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md)。以下按 **智能工作执行链路** 顺序列出（1→2→3a→3b→4→5→6）。
+**技能一览**见 [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) 与下方技能表。以下按 **智能工作执行链路** 顺序列出（1→2→3a→3b→4→5→6）。
 
 | 步骤 | Agent id               | 默认技能列表（示例） | 用途说明 |
 |------|------------------------|----------------------|----------|
@@ -67,7 +67,7 @@
 
 ### 安装方式（按来源区分，建议按链路顺序安装）
 
-**来源：skills.sh** — 知乎专项与 Baoyu 见 [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md)。按执行链路顺序安装示例：
+**来源：skills.sh** — 知乎专项与 Baoyu 安装：`npx skills add <owner/repo> --skill <名>`；技能列表见下方。按执行链路顺序安装示例：
 
 ```bash
 # 步骤 1、2：监控与拆解

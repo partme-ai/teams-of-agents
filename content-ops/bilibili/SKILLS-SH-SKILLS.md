@@ -76,6 +76,13 @@ npx skills add jimliu/baoyu-skills --skill baoyu-translate
 
 若 CLI 为 `npx skillsadd`（无空格），格式以 skills.sh 文档为准。安装后技能目录名需与 openclaw 配置中 `agents.list[].skills` 一致。
 
+### 更新
+- 重新执行 `npx skills add <owner/repo> --skill <技能名>` 覆盖安装即可；或以 skills.sh CLI 文档为准。
+
+### 卸载
+- **命令**：`npx skills remove <技能名>`（技能名与安装后目录名一致）
+- 或手动删除：项目安装为 `./.skills/<技能名>`，全局安装为 `~/.skills/<技能名>`。
+
 ## 与 B站四件套的对应建议（skills.sh）
 
 | bilibili Agent | 可选的 skills.sh 技能（ClawHub 未覆盖时） | Baoyu 可选 |

@@ -646,7 +646,7 @@ openclaw channels login --channel whatsapp --account biz
 
 it 工作区路径使用**无编号**名称（与 agent id 一致）；部署时可将仓库 `it/1-technical-director` 复制或链接到 `~/.openclaw/workspace-it/technical-director`，其余角色同理（如 `it/2-project-manager` → `workspace-it/project-manager`）。
 
-**OpenClaw 官方文档与运维**：完整文档索引 [docs.openclaw.ai/llms.txt](https://docs.openclaw.ai/llms.txt)；若访问受限可改用 [GitHub 镜像](https://github.com/openclaw/openclaw/tree/main/docs)。多 profile 时带 `--profile <name>` 执行 `openclaw status`、`openclaw doctor`、`openclaw health --json` 等。记忆与技能见 [Memory](https://docs.openclaw.ai/concepts/memory)、[Skills](https://docs.openclaw.ai/tools/skills)；故障排除见 [Updating / If you're stuck](https://docs.openclaw.ai/install/updating)、[Discord](https://discord.gg/clawd)。
+**OpenClaw 官方文档与运维**：完整文档索引 [docs.openclaw.ai/llms.txt](https://docs.openclaw.ai/llms.txt)；若访问受限可改用 [GitHub 镜像](https://github.com/openclaw/openclaw/tree/main/docs)。多 profile 时带 `--profile <name>` 执行 `openclaw status`、`openclaw doctor`、`openclaw health --json` 等。记忆与技能见 [Memory](https://docs.openclaw.ai/concepts/memory)、[Skills](https://docs.openclaw.ai/tools/skills)；国内用户可使用 [SkillHub 国内镜像](docs/SKILLS-MASTER.md#11-skillhub-国内镜像可选) 加速安装；故障排除见 [Updating / If you're stuck](https://docs.openclaw.ai/install/updating)、[Discord](https://discord.gg/clawd)。
 
 **深入阅读**：各领域技术方案与智能体职责见仓库 `partme-docs/OpenClaw-垂直领域应用分析` 下对应文档。
 

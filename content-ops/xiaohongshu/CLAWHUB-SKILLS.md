@@ -120,11 +120,20 @@
 
 ---
 
-## 安装与更新
+## 安装、更新与卸载
 
+### 安装
 - **搜索**：[ClawHub xiaohongshu](https://clawhub.ai/skills?sort=downloads&q=xiaohongshu) 查看最新技能与下载量。
-- **安装**：`clawhub install <slug>`；安装后技能目录名需与 openclaw 配置中 `agents.list[].skills` 一致。
-- **补充**：若 ClawHub 未覆盖的能力，可继续使用 skills.sh 作为后补；**skills.sh 小红书技能一览**见 [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md)，Baoyu 系列见 [xiaohongshu/README.md](./README.md)。
+- **命令**：`clawhub install <slug>`
+- 安装后技能目录名需与 openclaw 配置中 `agents.list[].skills` 一致。
+- **补充**：若 ClawHub 未覆盖的能力，可继续使用 skills.sh 作为后补；安装：`npx skills add <owner/repo> --skill <名>`；技能列表与 Baoyu 系列见本目录 [README.md](./README.md) 下方技能表与安装方式。
+
+### 更新
+- 重新执行 `clawhub install <slug>` 覆盖安装即可；具体以 [ClawHub CLI](https://clawhub.ai) 文档为准。
+
+### 卸载
+- **命令**：`clawhub uninstall <slug>`
+- 或手动删除 ClawHub 技能目录下对应技能文件夹（目录名一般为 slug）。
 
 ---
 

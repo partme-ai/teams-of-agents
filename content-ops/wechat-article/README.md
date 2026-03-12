@@ -7,7 +7,7 @@
 | 来源 | 搜索链接 | 技能一览文档 | 安装命令 |
 |------|----------|--------------|----------|
 | **ClawHub（为主）** | [clawhub.ai/skills?q=wechat](https://clawhub.ai/skills?sort=downloads&q=wechat) | [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) | `clawhub install <slug>` |
-| **skills.sh（取最优）** | [skills.sh/?q=wechat](https://skills.sh/?q=wechat) | [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md) | `npx skills add <owner/repo> --skill <名>` |
+| **skills.sh（取最优）** | [skills.sh/?q=wechat](https://skills.sh/?q=wechat) | 见下方技能表与安装方式 | `npx skills add <owner/repo> --skill <名>` |
 
 ## 必须保证的七个环节
 
@@ -25,13 +25,13 @@
 
 | 序号 | Agent id                        | 展示名           | 目录                               | 职责摘要 |
 |------|---------------------------------|------------------|------------------------------------|----------|
-| 1    | wechat-article-viral-breakdown  | 公众号爆款拆解   | 1-wechat-article-viral-breakdown   | 自动搜索行业热点与爆款文章，产出结构化拆解框架 |
-| 2    | wechat-article-rewrite          | 公众号二创       | 2-wechat-article-rewrite           | 根据拆解框架与主题创作新文案与封面/文中插图 |
-| 3    | wechat-article-publisher        | 公众号自动发布   | 3-wechat-article-publisher         | 将已通过草稿发布到公众号并记录结果 |
-| 4    | wechat-article-data-assistant   | 公众号数据助手   | 4-wechat-article-data-assistant   | 解析数据、交叉验证效果、可执行反馈给爆款拆解 |
-| 5    | wechat-article-hot-monitor     | 公众号热门监控   | 5-wechat-article-hot-monitor     | 每日/按需搜索公众号/微信生态热点与爆款，产出日报或摘要供拆解与数据助手 |
-| 6    | wechat-article-write           | 公众号写作       | 6-wechat-article-write           | 强调原创：用户主图+热点/爆款做原创文章，产出草稿供发布与数据助手 |
-| 7    | wechat-article-comment-manager | 公众号评论管理   | 7-wechat-article-comment-manager | 评论采集、起草回复、情感分析；回复需审批/门禁后发布 |
+| 1    | wechat-article-hot-monitor      | 公众号热门监控   | 1-wechat-article-hot-monitor      | 每日/按需搜索公众号/微信生态热点与爆款，产出日报或摘要供拆解与数据助手 |
+| 2    | wechat-article-viral-breakdown | 公众号爆款拆解   | 2-wechat-article-viral-breakdown  | 自动搜索行业热点与爆款文章，产出结构化拆解框架 |
+| 3    | wechat-article-rewrite          | 公众号二创       | 3-wechat-article-rewrite          | 根据拆解框架与主题创作新文案与封面/文中插图 |
+| 4    | wechat-article-write            | 公众号写作       | 4-wechat-article-write            | 强调原创：用户主图+热点/爆款做原创文章，产出草稿供发布与数据助手 |
+| 5    | wechat-article-publisher        | 公众号自动发布   | 5-wechat-article-publisher        | 将已通过草稿发布到公众号并记录结果 |
+| 6    | wechat-article-data-assistant   | 公众号数据助手   | 6-wechat-article-data-assistant   | 解析数据、交叉验证效果、可执行反馈给爆款拆解 |
+| 7    | wechat-article-comment-manager  | 公众号评论管理   | 7-wechat-article-comment-manager  | 评论采集、起草回复、情感分析；回复需审批/门禁后发布 |
 
 ## 智能工作执行链路
 
@@ -53,7 +53,7 @@
 
 ## 预设技能（按执行链路顺序）
 
-**ClawHub 技能一览**见 [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md)，**skills.sh 技能一览**见 [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md)。以下按 **智能工作执行链路** 顺序列出（1→2→3a→3b→4→5→6）。
+**ClawHub 技能一览**见 [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md)，**skills.sh 技能一览**安装：`npx skills add <owner/repo> --skill <名>`；技能列表见下方。以下按 **智能工作执行链路** 顺序列出（1→2→3a→3b→4→5→6）。
 
 | 步骤 | Agent id                        | 默认技能列表                                                                 | 用途说明 |
 |------|---------------------------------|------------------------------------------------------------------------------|----------|
@@ -75,7 +75,7 @@ clawhub install wechat-article-extractor
 clawhub install wechat-ai-publisher
 ```
 
-**来源：skills.sh（取最优）** — Baoyu 系列与公众号专项见 [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md)。按执行链路顺序安装示例：
+**来源：skills.sh（取最优）** — Baoyu 系列与公众号专项安装：`npx skills add <owner/repo> --skill <名>`；技能列表见下方。按执行链路顺序安装示例：
 
 ```bash
 # 步骤 1、2：监控与拆解

@@ -2,4 +2,4 @@
 
 - Comment source for 视频号 (API or browser); storage path for collected comments.
 - Approval path / queue for reply drafts; gate rules (replies require approval).
-- See [SKILLS-SH-SKILLS.md](../SKILLS-SH-SKILLS.md) and [CLAWHUB-SKILLS.md](../CLAWHUB-SKILLS.md). Never store credentials here.
+- Install: `npx skills add <owner/repo> --skill <name>` (skills.sh) or `clawhub install <slug>` (ClawHub). Skill list: see this platform README. Never store credentials here.

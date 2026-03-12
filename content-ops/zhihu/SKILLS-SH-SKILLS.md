@@ -32,6 +32,13 @@ npx skills add jimliu/baoyu-skills --skill baoyu-compress-image
 
 多平台发布（含知乎想法）：可安装 [social-push](https://github.com/jihe520/social-push) 或同类 Skill。安装后技能目录名需与 config 中 `skills` 一致。
 
+### 更新
+- 重新执行 `npx skills add <owner/repo> --skill <技能名>` 覆盖安装即可；或以 skills.sh CLI 文档为准。
+
+### 卸载
+- **命令**：`npx skills remove <技能名>`（技能名与安装后目录名一致）
+- 或手动删除：项目安装为 `./.skills/<技能名>`，全局安装为 `~/.skills/<技能名>`。
+
 ## 与知乎四件套的对应建议（skills.sh）
 
 | zhihu Agent | 可选的 skills.sh 技能 |

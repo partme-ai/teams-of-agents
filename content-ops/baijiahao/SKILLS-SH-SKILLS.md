@@ -24,6 +24,13 @@ npx skills add jimliu/baoyu-skills --skill baoyu-compress-image
 
 百家号发布需浏览器自动化或开放平台 API，技能名需与 config 中 `skills` 一致。**勿在 TOOLS.md 存凭证。**
 
+### 更新
+- 重新执行 `npx skills add <owner/repo> --skill <技能名>` 覆盖安装即可；或以 skills.sh CLI 文档为准。
+
+### 卸载
+- **命令**：`npx skills remove <技能名>`（技能名与安装后目录名一致）
+- 或手动删除：项目安装为 `./.skills/<技能名>`，全局安装为 `~/.skills/<技能名>`。
+
 ## 与百家号四件套的对应建议
 
 | baijiahao Agent | 可选的 skills.sh 技能 |

@@ -4,4 +4,4 @@
 - Output path for daily or on-demand reports (e.g. `reports/` or `hot-daily/`).
 - Industry keywords and topic lists; handoff paths for viral-breakdown and data assistant.
 - Report format (fields: trending topics, top video IDs/URLs, summary stats).
-- See [SKILLS-SH-SKILLS.md](../SKILLS-SH-SKILLS.md) and [CLAWHUB-SKILLS.md](../CLAWHUB-SKILLS.md). Never store credentials here.
+- Install: `npx skills add <owner/repo> --skill <name>` (skills.sh) or `clawhub install <slug>` (ClawHub). Skill list: see this platform README. Never store credentials here.

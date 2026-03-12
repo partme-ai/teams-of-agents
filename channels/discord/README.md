@@ -7,7 +7,7 @@
 | 来源 | 搜索链接 | 技能一览文档 | 安装命令 |
 |------|----------|--------------|----------|
 | **ClawHub** | [clawhub.ai/skills?q=discord](https://clawhub.ai/skills?sort=downloads&q=discord) | [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) | `clawhub install <slug>` |
-| **skills.sh** | [skills.sh/?q=discord](https://skills.sh/?q=discord) | [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md) | `npx skills add <owner/repo> --skill <名>` |
+| **skills.sh** | [skills.sh/?q=discord](https://skills.sh/?q=discord) | 见下方技能表与安装方式 | `npx skills add <owner/repo> --skill <名>` |
 
 ## 智能体清单
 
@@ -19,7 +19,7 @@
 
 ## 预设技能（默认安装）
 
-**ClawHub 技能一览**见 [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md)，**skills.sh 技能一览**见 [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md)。各智能体在配置片段中已绑定 Discord 相关技能。合并 `config/openclaw-discord-fragment.json` 后，OpenClaw 会按 `agents.list[].skills` 加载对应技能；当前默认使用 **discord**（可来自 ClawHub 或 skills.sh vm0-ai/steipete），安装后目录名与 config 中 `skills` 一致即可。
+**ClawHub 技能一览**见 [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md)，**skills.sh 技能与安装**见下方。各智能体在配置片段中已绑定 Discord 相关技能。合并 `config/openclaw-discord-fragment.json` 后，OpenClaw 会按 `agents.list[].skills` 加载对应技能；当前默认使用 **discord**（可来自 ClawHub 或 skills.sh vm0-ai/steipete），安装后目录名与 config 中 `skills` 一致即可。
 
 | Agent id          | 默认技能列表   | 用途说明 |
 |-------------------|----------------|----------|
@@ -36,7 +36,7 @@ clawhub search discord
 clawhub install <slug>
 ```
 
-**来源：skills.sh** — 可选 vm0-ai/vm0-skills（discord、discord-webhook）、steipete/clawdis（discord）、sickn33/antigravity-awesome-skills（discord-bot-architect、discord-automation）；完整列表见 [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md)。可选 Baoyu 技能（配图/排版/多平台发帖等）见该文档中 Baoyu 系列。
+**来源：skills.sh** — 安装：`npx skills add <owner/repo> --skill <名>`；可选 vm0-ai/vm0-skills（discord、discord-webhook）、steipete/clawdis（discord）、sickn33/antigravity-awesome-skills（discord-bot-architect、discord-automation）；完整列表可查 [skills.sh/?q=discord](https://skills.sh/?q=discord)。可选 Baoyu 技能（配图/排版/多平台发帖等）见 skills.sh Baoyu 系列。
 
 ```bash
 npx skills add vm0-ai/vm0-skills --skill discord

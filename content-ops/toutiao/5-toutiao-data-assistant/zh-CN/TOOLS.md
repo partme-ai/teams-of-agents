@@ -1,4 +1,4 @@
 # TOOLS.md - 本地备注
 
 - 日志路径；报告路径；反馈给爆款拆解的路径。
-- 技能见 [SKILLS-SH-SKILLS.md](../../SKILLS-SH-SKILLS.md)、[CLAWHUB-SKILLS.md](../../CLAWHUB-SKILLS.md)。勿存凭证。
+- 技能安装：`npx skills add <owner/repo> --skill <技能名>`（skills.sh）或 `clawhub install <slug>`（ClawHub）。技能列表见本平台 README。勿存凭证。

@@ -7,7 +7,7 @@
 | 来源 | 搜索链接 | 技能一览文档 | 安装命令 |
 |------|----------|--------------|----------|
 | **ClawHub（为主）** | [clawhub.ai/skills?q=bilibili](https://clawhub.ai/skills?sort=downloads&q=bilibili) | [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) | `clawhub install <slug>` |
-| **skills.sh（取最优）** | [skills.sh/?q=bilibili](https://skills.sh/?q=bilibili) | [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md) | `npx skills add <owner/repo> --skill <名>` |
+| **skills.sh（取最优）** | [skills.sh/?q=bilibili](https://skills.sh/?q=bilibili) | 见下方技能表与安装方式 | `npx skills add <owner/repo> --skill <名>` |
 
 ## 智能体清单
 
@@ -43,7 +43,7 @@ B 站七件套按以下链路协同执行（与图文平台顺序略有不同：
 
 ## 预设技能（按执行链路顺序）
 
-**ClawHub 技能一览**见 [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md)，**skills.sh 技能一览**见 [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md)。以下按 **智能工作执行链路** 顺序列出（1→2→3→4→5→6→7）。
+**ClawHub 技能一览**见 [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md)，**skills.sh 技能一览**安装：`npx skills add <owner/repo> --skill <名>`；技能列表见下方。以下按 **智能工作执行链路** 顺序列出（1→2→3→4→5→6→7）。
 
 | 步骤 | Agent id                  | 默认技能列表（ClawHub） | 用途说明 |
 |------|---------------------------|-------------------------|----------|
@@ -74,7 +74,7 @@ clawhub install bilibili-upload
 clawhub install bilibili-analytics
 ```
 
-**来源：skills.sh（取最优）** — 完整列表见 [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md)。可选 Baoyu 技能（配图/排版等）见该文档中 Baoyu 系列。
+**来源：skills.sh（取最优）** — 完整列表安装：`npx skills add <owner/repo> --skill <名>`；技能列表见下方。可选 Baoyu 技能（配图/排版等）见该文档中 Baoyu 系列。
 
 ```bash
 npx skills add hamsterider-m/bilibili-subtitle --skill bilibili-subtitle

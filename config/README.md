@@ -91,54 +91,54 @@
 
 - **智能体**：zhihu 七件套（爆款拆解、二创、自动发布、数据助手、热门监控、写作、评论管理）；技能以 skills.sh + baoyu 为主，发布可接 [social-push](https://github.com/jihe520/social-push)（知乎想法）。
 - **workspace 路径**：`~/.openclaw/workspace-zhihu-*`；部署时将仓库 `content-ops/zhihu/1-...`～`content-ops/zhihu/7-...` 复制或链接到对应路径。
-- **技能安装**：见 [content-ops/zhihu/README.md](../content-ops/zhihu/README.md)、[content-ops/zhihu/SKILLS-SH-SKILLS.md](../content-ops/zhihu/SKILLS-SH-SKILLS.md)。勿在 TOOLS.md 存凭证。
+- **技能安装**：见 [content-ops/zhihu/README.md](../content-ops/zhihu/README.md)（含技能列表与安装方式）。勿在 TOOLS.md 存凭证。
 - **合并方式**：将片段的 `agents.list`、`bindings`、`tools` 合并进主配置。
 
 ## 百家号管线（openclaw-baijiahao-fragment.json）
 
 - **智能体**：baijiahao 七件套（爆款拆解、二创、自动发布、数据助手、热门监控、写作、评论管理）；技能以 baoyu 系列为主，发布需浏览器或百家号开放平台。
 - **workspace 路径**：`~/.openclaw/workspace-baijiahao-*`；部署时将仓库 `content-ops/baijiahao/1-...`～`content-ops/baijiahao/7-...` 复制或链接到对应路径。
-- **技能安装**：见 [content-ops/baijiahao/README.md](../content-ops/baijiahao/README.md)、[content-ops/baijiahao/SKILLS-SH-SKILLS.md](../content-ops/baijiahao/SKILLS-SH-SKILLS.md)。勿在 TOOLS.md 存凭证。
+- **技能安装**：见 [content-ops/baijiahao/README.md](../content-ops/baijiahao/README.md)（含技能列表与安装方式）。勿在 TOOLS.md 存凭证。
 - **合并方式**：将片段的 `agents.list`、`bindings`、`tools` 合并进主配置。
 
 ## 微博管线（openclaw-weibo-fragment.json）
 
 - **智能体**：weibo 七件套（热门监控、爆款拆解、二创、自动发布、数据助手、写作、评论管理）；技能以 baoyu 系列为主，发布可接 baoyu-post-to-weibo 或 social-push。
 - **workspace 路径**：`~/.openclaw/workspace-weibo-*`；部署时将仓库 `content-ops/weibo/1-...`～`content-ops/weibo/7-...` 复制或链接到对应路径。
-- **技能安装**：见 [content-ops/weibo/README.md](../content-ops/weibo/README.md)、[content-ops/weibo/SKILLS-SH-SKILLS.md](../content-ops/weibo/SKILLS-SH-SKILLS.md)。勿在 TOOLS.md 存凭证。
+- **技能安装**：见 [content-ops/weibo/README.md](../content-ops/weibo/README.md)（含技能列表与安装方式）。勿在 TOOLS.md 存凭证。
 - **合并方式**：将片段的 `agents.list`、`bindings`、`tools` 合并进主配置。
 
 ## 视频号管线（openclaw-wechat-video-fragment.json）
 
 - **智能体**：wechat-video 七件套（热门监控、爆款拆解、二创、自动发布、数据助手、写作、评论管理）；发布依赖视频号开放能力或浏览器自动化，技能以 baoyu 系列为主。
 - **workspace 路径**：`~/.openclaw/workspace-wechat-video-*`；部署时将仓库 `content-ops/wechat-video/1-...`～`content-ops/wechat-video/7-...` 复制或链接到对应路径。
-- **技能安装**：见 [content-ops/wechat-video/README.md](../content-ops/wechat-video/README.md)、[content-ops/wechat-video/SKILLS-SH-SKILLS.md](../content-ops/wechat-video/SKILLS-SH-SKILLS.md)。勿在 TOOLS.md 存凭证。
+- **技能安装**：见 [content-ops/wechat-video/README.md](../content-ops/wechat-video/README.md)（含技能列表与安装方式）。勿在 TOOLS.md 存凭证。
 - **合并方式**：将片段的 `agents.list`、`bindings`、`tools` 合并进主配置。
 
 ## 掘金管线（openclaw-juejin-fragment.json）
 
 - **智能体**：juejin 七件套（热门监控、爆款拆解、二创、自动发布、数据助手、写作、评论管理）；技术内容向，技能以 baoyu 系列与 social-push 为主。
 - **workspace 路径**：`~/.openclaw/workspace-juejin-*`；部署时将仓库 `content-ops/juejin/1-...`～`content-ops/juejin/7-...` 复制或链接到对应路径。
-- **技能安装**：见 [content-ops/juejin/README.md](../content-ops/juejin/README.md)、[content-ops/juejin/SKILLS-SH-SKILLS.md](../content-ops/juejin/SKILLS-SH-SKILLS.md)。勿在 TOOLS.md 存凭证。
+- **技能安装**：见 [content-ops/juejin/README.md](../content-ops/juejin/README.md)（含技能列表与安装方式）。勿在 TOOLS.md 存凭证。
 - **合并方式**：将片段的 `agents.list`、`bindings`、`tools` 合并进主配置。
 
 ## 头条号管线（openclaw-toutiao-fragment.json）
 
 - **智能体**：toutiao 七件套（热门监控、爆款拆解、二创、自动发布、数据助手、写作、评论管理）；发布需头条开放平台或浏览器，技能以 baoyu 系列为主。
 - **workspace 路径**：`~/.openclaw/workspace-toutiao-*`；部署时将仓库 `content-ops/toutiao/1-...`～`content-ops/toutiao/7-...` 复制或链接到对应路径。
-- **技能安装**：见 [content-ops/toutiao/README.md](../content-ops/toutiao/README.md)、[content-ops/toutiao/SKILLS-SH-SKILLS.md](../content-ops/toutiao/SKILLS-SH-SKILLS.md)。勿在 TOOLS.md 存凭证。
+- **技能安装**：见 [content-ops/toutiao/README.md](../content-ops/toutiao/README.md)（含技能列表与安装方式）。勿在 TOOLS.md 存凭证。
 - **合并方式**：将片段的 `agents.list`、`bindings`、`tools` 合并进主配置。
 
 ## 抖音管线（openclaw-douyin-fragment.json）
 
 - **智能体**：douyin 七件套（热门监控、爆款拆解、二创、自动发布、数据助手、写作、评论管理）；短视频平台，技能以 baoyu 系列为主，发布需抖音开放平台 API 或浏览器，须遵守平台 ToS。
 - **workspace 路径**：`~/.openclaw/workspace-douyin-*`；部署时将仓库 `content-ops/douyin/1-douyin-hot-monitor`～`content-ops/douyin/7-douyin-comment-manager` 复制或链接到对应路径。
-- **技能安装**：见 [content-ops/douyin/README.md](../content-ops/douyin/README.md)、[content-ops/douyin/SKILLS-SH-SKILLS.md](../content-ops/douyin/SKILLS-SH-SKILLS.md)、[content-ops/douyin/CLAWHUB-SKILLS.md](../content-ops/douyin/CLAWHUB-SKILLS.md)。勿在 TOOLS.md 存凭证。
+- **技能安装**：见 [content-ops/douyin/README.md](../content-ops/douyin/README.md)（含技能列表与安装方式）、[content-ops/douyin/CLAWHUB-SKILLS.md](../content-ops/douyin/CLAWHUB-SKILLS.md)。勿在 TOOLS.md 存凭证。
 - **合并方式**：将片段的 `agents.list`、`bindings`、`tools` 合并进主配置。
 
 ## 快手管线（openclaw-kuaishou-fragment.json）
 
 - **智能体**：kuaishou 七件套（热门监控、爆款拆解、二创、自动发布、数据助手、写作、评论管理）；短视频平台，技能以 baoyu 系列为主，发布需快手开放平台 API 或浏览器，须遵守平台 ToS。
 - **workspace 路径**：`~/.openclaw/workspace-kuaishou-*`；部署时将仓库 `content-ops/kuaishou/1-kuaishou-hot-monitor`～`content-ops/kuaishou/7-kuaishou-comment-manager` 复制或链接到对应路径。
-- **技能安装**：见 [content-ops/kuaishou/README.md](../content-ops/kuaishou/README.md)、[content-ops/kuaishou/SKILLS-SH-SKILLS.md](../content-ops/kuaishou/SKILLS-SH-SKILLS.md)、[content-ops/kuaishou/CLAWHUB-SKILLS.md](../content-ops/kuaishou/CLAWHUB-SKILLS.md)。勿在 TOOLS.md 存凭证。
+- **技能安装**：见 [content-ops/kuaishou/README.md](../content-ops/kuaishou/README.md)（含技能列表与安装方式）、[content-ops/kuaishou/CLAWHUB-SKILLS.md](../content-ops/kuaishou/CLAWHUB-SKILLS.md)。勿在 TOOLS.md 存凭证。
 - **合并方式**：将片段的 `agents.list`、`bindings`、`tools` 合并进主配置。

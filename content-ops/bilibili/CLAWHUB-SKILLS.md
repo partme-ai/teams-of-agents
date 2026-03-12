@@ -75,12 +75,21 @@ B 站视频搜索与数据分析：抓取指定关键词搜索结果、生成统
 
 ---
 
-## 安装与更新
+## 安装、更新与卸载
 
+### 安装
 - **搜索**：[ClawHub bilibili](https://clawhub.ai/skills?sort=downloads&q=bilibili) 查看最新技能与下载量。
-- **安装**：`clawhub install <slug>`；安装后技能目录名需与 openclaw 配置中 `agents.list[].skills` 一致。
+- **命令**：`clawhub install <slug>`
+- 安装后技能目录名需与 openclaw 配置中 `agents.list[].skills` 一致。
 - **登录/凭证**：部分技能（投稿、私信、播放）需浏览器登录或 B 站 Cookie/凭证；勿在 TOOLS.md 或工作区存储凭证。
-- **skills.sh 来源**：另有 [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md)，列出 [skills.sh bilibili](https://skills.sh/?q=bilibili) 技能及安装方式，可与 ClawHub 搭配使用。
+- **skills.sh 来源**：安装 `npx skills add <owner/repo> --skill <名>`；[skills.sh bilibili](https://skills.sh/?q=bilibili) 技能列表及安装方式见本目录 README，可与 ClawHub 搭配使用。
+
+### 更新
+- 重新执行 `clawhub install <slug>` 覆盖安装即可；具体以 ClawHub CLI 文档为准。
+
+### 卸载
+- **命令**：`clawhub uninstall <slug>`
+- 或手动删除 ClawHub 技能目录下对应技能文件夹（目录名一般为 slug）。
 
 ---
 

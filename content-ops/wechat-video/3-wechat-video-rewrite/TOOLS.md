@@ -2,4 +2,4 @@
 
 - Breakdown input path; draft output path for 视频号 (copy + cover + visuals).
 - Style rules and handoff paths for publisher and data assistant.
-- See [SKILLS-SH-SKILLS.md](../SKILLS-SH-SKILLS.md) and [CLAWHUB-SKILLS.md](../CLAWHUB-SKILLS.md). Never store credentials here.
+- Install: `npx skills add <owner/repo> --skill <name>` (skills.sh) or `clawhub install <slug>` (ClawHub). Skill list: see this platform README. Never store credentials here.

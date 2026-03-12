@@ -7,7 +7,7 @@
 | 来源 | 搜索链接 | 技能一览文档 | 安装命令 |
 |------|----------|--------------|----------|
 | **ClawHub** | [clawhub.ai/skills?q=telegram](https://clawhub.ai/skills?sort=downloads&q=telegram) | [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) | `clawhub install <slug>` |
-| **skills.sh** | [skills.sh/?q=telegram](https://skills.sh/?q=telegram) | [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md) | `npx skills add <owner/repo> --skill <名>` |
+| **skills.sh** | [skills.sh/?q=telegram](https://skills.sh/?q=telegram) | 见下方技能表与安装方式 | `npx skills add <owner/repo> --skill <名>` |
 
 ## 智能体清单
 
@@ -19,7 +19,7 @@
 
 ## 预设技能（默认安装）
 
-**ClawHub 技能一览**见 [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md)，**skills.sh 技能一览**见 [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md)。各智能体在配置片段中已绑定 Telegram 相关技能。合并 `config/openclaw-telegram-fragment.json` 后，OpenClaw 会按 `agents.list[].skills` 加载对应技能；当前默认使用 **telegram-bot-builder**（skills.sh），可改为 ClawHub 的 `telegram` 或 `telegram-api`，安装后目录名与 config 中 `skills` 一致即可。
+**ClawHub 技能一览**见 [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md)，**skills.sh 技能与安装**见下方。各智能体在配置片段中已绑定 Telegram 相关技能。合并 `config/openclaw-telegram-fragment.json` 后，OpenClaw 会按 `agents.list[].skills` 加载对应技能；当前默认使用 **telegram-bot-builder**（skills.sh），可改为 ClawHub 的 `telegram` 或 `telegram-api`，安装后目录名与 config 中 `skills` 一致即可。
 
 | Agent id               | 默认技能列表         | 用途说明 |
 |------------------------|----------------------|----------|
@@ -36,7 +36,7 @@ clawhub search telegram
 clawhub install <slug>
 ```
 
-**来源：skills.sh** — 默认 telegram-bot-builder（[sickn33/antigravity-awesome-skills](https://skills.sh/sickn33/antigravity-awesome-skills/telegram-bot-builder)）；完整列表见 [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md)。可选 Baoyu 技能（配图/排版/多平台发帖等）见该文档中 Baoyu 系列。
+**来源：skills.sh** — 安装：`npx skills add <owner/repo> --skill <名>`；默认 telegram-bot-builder（[sickn33/antigravity-awesome-skills](https://skills.sh/sickn33/antigravity-awesome-skills/telegram-bot-builder)）；完整列表可查 [skills.sh/?q=telegram](https://skills.sh/?q=telegram)。可选 Baoyu 技能（配图/排版/多平台发帖等）见 skills.sh Baoyu 系列。
 
 ```bash
 npx skills add sickn33/antigravity-awesome-skills --skill telegram-bot-builder

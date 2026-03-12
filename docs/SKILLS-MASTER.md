@@ -1,6 +1,6 @@
 # 总技能文档（ClawHub + skills.sh + Baoyu 归类）
 
-> 全仓库技能选型单一参考：统一呈现两来源、Baoyu 全表归类与使用场景，并索引各管线技能文档。各管线仍保留各自 CLAWHUB-SKILLS.md / SKILLS-SH-SKILLS.md（见 §3），本文档做汇总与索引。
+> 全仓库技能选型单一参考：统一呈现两来源、Baoyu 全表归类与使用场景，并索引各管线技能文档。各管线技能列表与安装方式见各管线 README 与 CLAWHUB-SKILLS.md（见 §3），本文档做汇总与索引。
 
 ## 1. 技能来源与选型
 
@@ -11,6 +11,24 @@
 
 - 安装后技能目录名需与 openclaw 配置中 `agents.list[].skills` 一致。
 - **勿在 TOOLS.md 存凭证。**
+
+### 1.1 SkillHub 国内镜像（可选）
+
+通过 SkillHub 国内镜像加速安装，下载速度更快更稳定。
+
+**第一步：安装 SkillHub CLI**
+
+```bash
+curl -fsSL https://skillhub-1251783334.cos.ap-guangzhou.myqcloud.com/install/install.sh | bash
+```
+
+**第二步：安装技能**
+
+```bash
+skillhub install <slug>
+```
+
+其中 `<slug>` 与 ClawHub 技能名一致（如 `self-improving-agent`、`xiaohongshu-mcp` 等）。安装后技能目录名同样需与 openclaw 配置中 `agents.list[].skills` 一致。
 
 ## 2. Baoyu 全表（jimliu/baoyu-skills）18 项：归类 + 使用场景
 
@@ -68,20 +86,20 @@ flowchart LR
 
 管线内**优先看 ClawHub**，**后补看 skills.sh + Baoyu**；Baoyu 完整列表与归类以本文档 §2 为准。
 
-| 管线 | CLAWHUB-SKILLS | SKILLS-SH-SKILLS | 说明 |
-|------|----------------|------------------|------|
-| xiaohongshu | [content-ops/xiaohongshu/CLAWHUB-SKILLS.md](../content-ops/xiaohongshu/CLAWHUB-SKILLS.md) | [content-ops/xiaohongshu/SKILLS-SH-SKILLS.md](../content-ops/xiaohongshu/SKILLS-SH-SKILLS.md) | 小红书七件套，ClawHub 优先 |
-| zhihu | [content-ops/zhihu/CLAWHUB-SKILLS.md](../content-ops/zhihu/CLAWHUB-SKILLS.md) | [content-ops/zhihu/SKILLS-SH-SKILLS.md](../content-ops/zhihu/SKILLS-SH-SKILLS.md) | 知乎七件套 |
-| toutiao | [content-ops/toutiao/CLAWHUB-SKILLS.md](../content-ops/toutiao/CLAWHUB-SKILLS.md) | [content-ops/toutiao/SKILLS-SH-SKILLS.md](../content-ops/toutiao/SKILLS-SH-SKILLS.md) | 头条号七件套 |
-| baijiahao | [content-ops/baijiahao/CLAWHUB-SKILLS.md](../content-ops/baijiahao/CLAWHUB-SKILLS.md) | [content-ops/baijiahao/SKILLS-SH-SKILLS.md](../content-ops/baijiahao/SKILLS-SH-SKILLS.md) | 百家号四件套 |
-| wechat-article | [content-ops/wechat-article/CLAWHUB-SKILLS.md](../content-ops/wechat-article/CLAWHUB-SKILLS.md) | [content-ops/wechat-article/SKILLS-SH-SKILLS.md](../content-ops/wechat-article/SKILLS-SH-SKILLS.md) | 公众号 |
-| bilibili | [content-ops/bilibili/CLAWHUB-SKILLS.md](../content-ops/bilibili/CLAWHUB-SKILLS.md) | [content-ops/bilibili/SKILLS-SH-SKILLS.md](../content-ops/bilibili/SKILLS-SH-SKILLS.md) | B 站 |
-| weibo | [content-ops/weibo/CLAWHUB-SKILLS.md](../content-ops/weibo/CLAWHUB-SKILLS.md) | [content-ops/weibo/SKILLS-SH-SKILLS.md](../content-ops/weibo/SKILLS-SH-SKILLS.md) | 微博 |
-| juejin | [content-ops/juejin/CLAWHUB-SKILLS.md](../content-ops/juejin/CLAWHUB-SKILLS.md) | [content-ops/juejin/SKILLS-SH-SKILLS.md](../content-ops/juejin/SKILLS-SH-SKILLS.md) | 掘金 |
-| discord | [channels/discord/CLAWHUB-SKILLS.md](../channels/discord/CLAWHUB-SKILLS.md) | [channels/discord/SKILLS-SH-SKILLS.md](../channels/discord/SKILLS-SH-SKILLS.md) | Discord |
-| telegram | [channels/telegram/CLAWHUB-SKILLS.md](../channels/telegram/CLAWHUB-SKILLS.md) | [channels/telegram/SKILLS-SH-SKILLS.md](../channels/telegram/SKILLS-SH-SKILLS.md) | Telegram |
-| wechat-video | [content-ops/wechat-video/CLAWHUB-SKILLS.md](../content-ops/wechat-video/CLAWHUB-SKILLS.md) | [content-ops/wechat-video/SKILLS-SH-SKILLS.md](../content-ops/wechat-video/SKILLS-SH-SKILLS.md) | 视频号 |
-| douyin | [content-ops/douyin/CLAWHUB-SKILLS.md](../content-ops/douyin/CLAWHUB-SKILLS.md) | [content-ops/douyin/SKILLS-SH-SKILLS.md](../content-ops/douyin/SKILLS-SH-SKILLS.md) | 抖音七件套 |
+| 管线 | CLAWHUB-SKILLS | README（技能列表与安装） | 说明 |
+|------|----------------|--------------------------|------|
+| xiaohongshu | [content-ops/xiaohongshu/CLAWHUB-SKILLS.md](../content-ops/xiaohongshu/CLAWHUB-SKILLS.md) | [content-ops/xiaohongshu/README.md](../content-ops/xiaohongshu/README.md) | 小红书七件套，ClawHub 优先 |
+| zhihu | [content-ops/zhihu/CLAWHUB-SKILLS.md](../content-ops/zhihu/CLAWHUB-SKILLS.md) | [content-ops/zhihu/README.md](../content-ops/zhihu/README.md) | 知乎七件套 |
+| toutiao | [content-ops/toutiao/CLAWHUB-SKILLS.md](../content-ops/toutiao/CLAWHUB-SKILLS.md) | [content-ops/toutiao/README.md](../content-ops/toutiao/README.md) | 头条号七件套 |
+| baijiahao | [content-ops/baijiahao/CLAWHUB-SKILLS.md](../content-ops/baijiahao/CLAWHUB-SKILLS.md) | [content-ops/baijiahao/README.md](../content-ops/baijiahao/README.md) | 百家号四件套 |
+| wechat-article | [content-ops/wechat-article/CLAWHUB-SKILLS.md](../content-ops/wechat-article/CLAWHUB-SKILLS.md) | [content-ops/wechat-article/README.md](../content-ops/wechat-article/README.md) | 公众号 |
+| bilibili | [content-ops/bilibili/CLAWHUB-SKILLS.md](../content-ops/bilibili/CLAWHUB-SKILLS.md) | [content-ops/bilibili/README.md](../content-ops/bilibili/README.md) | B 站 |
+| weibo | [content-ops/weibo/CLAWHUB-SKILLS.md](../content-ops/weibo/CLAWHUB-SKILLS.md) | [content-ops/weibo/README.md](../content-ops/weibo/README.md) | 微博 |
+| juejin | [content-ops/juejin/CLAWHUB-SKILLS.md](../content-ops/juejin/CLAWHUB-SKILLS.md) | [content-ops/juejin/README.md](../content-ops/juejin/README.md) | 掘金 |
+| discord | [channels/discord/CLAWHUB-SKILLS.md](../channels/discord/CLAWHUB-SKILLS.md) | [channels/discord/README.md](../channels/discord/README.md) | Discord |
+| telegram | [channels/telegram/CLAWHUB-SKILLS.md](../channels/telegram/CLAWHUB-SKILLS.md) | [channels/telegram/README.md](../channels/telegram/README.md) | Telegram |
+| wechat-video | [content-ops/wechat-video/CLAWHUB-SKILLS.md](../content-ops/wechat-video/CLAWHUB-SKILLS.md) | [content-ops/wechat-video/README.md](../content-ops/wechat-video/README.md) | 视频号 |
+| douyin | [content-ops/douyin/CLAWHUB-SKILLS.md](../content-ops/douyin/CLAWHUB-SKILLS.md) | [content-ops/douyin/README.md](../content-ops/douyin/README.md) | 抖音七件套 |
 
 ## 4. 安装命令汇总（Baoyu）
 
