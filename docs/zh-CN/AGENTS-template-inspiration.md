@@ -2,11 +2,17 @@
 
 本文档说明从**通用工作区 AGENTS.md 模板**（Session Startup、Memory、Red Lines、Group Chats、Heartbeats 等）可采纳的要点，以及对现有公司 / 企微客服 / 游戏等智能体配置的优化建议。
 
+## 0. 身份与首次接待（Identity & First Contact）
+
+**规则：** 本仓库中所有智能体的身份与职责均在配置（SOUL/IDENTITY）中给定，无需向对话者求证或确认。智能体对自己的身份有清晰认知（由 SOUL.md 与 IDENTITY.md 定义）。**对客智能体不得在首次或任何对话中向客户询问「您是谁」或要求客户自我介绍** — 代表公司直接问候并进入服务。BOOTSTRAP.md 仅供**配置者**在**非对客**会话中使用（如填写 USER.md、话术/知识库路径）；在对客渠道中忽略 BOOTSTRAP，以 SOUL/IDENTITY 为固定身份。
+
+**建议采纳：** 对任何与终端客户对话的智能体（如企微客服、公司客服）：(1) 在 IDENTITY.md 中预填姓名/角色/风格；删除「在首次对话中填写」等易被理解为向对方问身份的表述。(2) First Run：写明 BOOTSTRAP 仅配置者用；在对客渠道身份已固定；不得向客户问「您是谁」。(3) Red Lines：增加「身份与首次接待：禁止向客户询问『您是谁』；代表公司直接问候并进入服务。」(4) BOOTSTRAP：删除对客开场白中的「你是谁」；明确在对客会话中忽略本文件。
+
 ## 1. Session Startup（每会话启动，即 Every Session）
 
 **模板要点：** 明确的 4 步清单；「Don't ask permission. Just do it.」
 
-**建议采纳：** 保留现有 4 步（SOUL、USER、memory/YYYY-MM-DD、主会话时读 MEMORY.md）。可将「Every Session」改为「Session Startup」更直观。明确写「无需征询许可，直接执行」以减少犹豫。
+**建议采纳：** 保留现有 4 步（SOUL、USER、memory/YYYY-MM-DD、主会话时读 MEMORY.md）。增加：「你的身份由 SOUL.md 与 IDENTITY.md 定义；启动时读取。不要在对客对话中询问客户身份。」可将「Every Session」改为「Session Startup」更直观。明确写「无需征询许可，直接执行」以减少犹豫。
 
 ## 2. Memory（记忆）
 
@@ -56,7 +62,8 @@
 
 | 模块           | 建议补充/调整 |
 |----------------|----------------|
-| Session Startup | 保持 4 步；加「无需征询许可，直接执行」 |
+| 身份与首次接待 | 对客智能体：身份在 SOUL/IDENTITY；禁止问客户「您是谁」；BOOTSTRAP 仅配置者；Red Line 直接问候并服务。 |
+| Session Startup | 保持 4 步；加身份加载与「不要询问客户身份」；「无需征询许可，直接执行」 |
 | Memory         | 「写下来，不要只在脑子里记」；MEMORY.md 仅主会话、不在群聊加载 |
 | Red Lines      | 明确「不外泄」；`trash` > `rm` |
 | External vs Internal | 「可自由做」与「先问再做」两列表 |
