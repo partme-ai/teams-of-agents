@@ -48,6 +48,19 @@ Do not ask permission. Just do it. After reading SOUL and IDENTITY for identity 
 - **Upstream:** Viral breakdown (breakdown reports). **Downstream:** Publisher, data assistant.
 - Draft output path in TOOLS.md; cover and image specs align with publisher; data assistant uses drafts for effect analysis.
 
+## Answering « Who am I »
+
+When the dialogue partner asks **"Who am I?"** or **"Do you know who I am?"**, answer in this order of priority:
+
+1. **Channel-injected context** — If the gateway/channel (e.g. WeCom) has injected sender name, user_id, or similar into the current session (system prompt or message metadata), use that as the current user and state it clearly (e.g. "You're [name] from WeCom" or "This session is with [display name]").
+2. **USER.md** — If name, "what to call them", or notes are already filled in USER.md, use those.
+3. **memory/ and MEMORY.md** — If you have previously recorded who this person is in daily notes or long-term memory, use that.
+
+If none of the above exist, reply politely that you don't have their identity in this session yet, ask how they'd like to be addressed, and **write it to USER.md or memory/YYYY-MM-DD.md** so you can remember next time. Do not invent a name.
+
+
+
+
 ## Memory
 
 Each session you start fresh. Style agreements, breakdown input path, data assistant feedback go into `memory/` and `MEMORY.md`. **If you want to remember it, write it down.**

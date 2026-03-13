@@ -2,26 +2,30 @@
 
 > 基于 [ClawHub bilibili 技能](https://clawhub.ai/skills?sort=downloads&q=bilibili) 与 [skills.sh bilibili](https://skills.sh/?q=bilibili)（**ClawHub 为主、skills.sh 取最优**），为 **B站（bilibili）** 提供内容管线七件套：热门监控、爆款拆解、内容创作助手、视频发布、数据助手、写作、评论管理。与 openclaw-agents 其他领域（xiaohongshu / wechat-article / discord 等）并列，单独目录便于按渠道绑定与扩展。
 
-## 技能来源
+## 技能选型
 
-| 来源 | 搜索链接 | 技能一览文档 | 安装命令 |
-|------|----------|--------------|----------|
-| **ClawHub（为主）** | [clawhub.ai/skills?q=bilibili](https://clawhub.ai/skills?sort=downloads&q=bilibili) | [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) | `clawhub install <slug>` |
-| **skills.sh（取最优）** | [skills.sh/?q=bilibili](https://skills.sh/?q=bilibili) | [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md) | `npx skills add <owner/repo> --skill <名>` |
+| 序号 | 来源 | 搜索链接 | 技能一览文档 | 安装命令 |
+|------|------|----------|--------------|----------|
+| 1 | **ClawHub（为主）** | [clawhub.ai/skills?q=bilibili](https://clawhub.ai/skills?sort=downloads&q=bilibili) | [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) | `clawhub install <slug>` |
+| 2 | **skills.sh（取最优）** | [skills.sh/?q=bilibili](https://skills.sh/?q=bilibili) | [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md) | `npx skills add <owner/repo> --skill <名>` |
 
 ## 技能评估结论（摘录）
 
 > 完整评估见 [SKILLS-EVALUATION.md](./SKILLS-EVALUATION.md)。原则：**ClawHub 为主、skills.sh 取最优；同能力只保留一个最优技能。**
 
-| 能力 | 首选 | 备选/不重复装 |
-|------|------|----------------|
-| B站热门/日报 | bilibili-hot-monitor（ClawHub） | — |
-| UP 更新检查 | bilibili-update-viewer（ClawHub） | — |
-| 标题/标签/字幕 | bilibili-helper, bilibili-subtitle-download-skill | — |
-| 视频发布/投稿 | bilibili-video-publish, bilibili-upload | 同质选一 |
-| 数据分析/统计 | bilibili-analytics | — |
-| 报告/拆解格式 | baoyu-format-markdown | — |
-| 封面/配图 | baoyu-cover-image, baoyu-article-illustrator | — |
+| 序号 | 能力 | 首选 | 备选/不重复装 |
+|------|------|------|----------------|
+| 1 | B站热门/日报 | bilibili-hot-monitor（ClawHub） | — |
+| 2 | UP 更新检查 | bilibili-update-viewer（ClawHub） | — |
+| 3 | 标题/标签/字幕 | bilibili-helper, bilibili-subtitle-download-skill | — |
+| 4 | 视频发布/投稿 | bilibili-video-publish, bilibili-upload | 同质选一 |
+| 5 | 数据分析/统计 | bilibili-analytics | — |
+| 6 | 报告/拆解格式 | baoyu-format-markdown | — |
+| 7 | 封面/配图 | baoyu-cover-image, baoyu-article-illustrator | — |
+
+## 补充能力（完整栈）
+
+七件套之外本管线可用上的补充能力（与 [SKILLS-EVALUATION.md §6.1](./SKILLS-EVALUATION.md) 一致）：评论/弹幕采集与回复、多语言与翻译、信息图/漫画风配图；推荐技能见 6.1 表。
 
 ## 智能体清单
 
@@ -69,22 +73,24 @@ B 站七件套按以下链路协同执行（与图文平台顺序略有不同：
 | 6 | bilibili-write            | baoyu-cover-image, baoyu-article-illustrator | skills.sh | 原创脚本与配图方向 |
 | 7 | bilibili-comment-manager  | （按需选评论/弹幕采集与回复技能） | ClawHub/skills.sh | 评论/弹幕拉取、回复草稿 |
 
-### 安装命令（按来源与链路顺序）
+### 安装前置与唯一命令来源
 
-安装后目录名需与 config 中 `skills` 一致。**投稿/发布类技能**通常需浏览器登录或 B 站凭证，勿在 TOOLS.md 或工作区存储凭证。
-
-**第一步：安装 SkillHub CLI**
+**第一步：安装 SkillHub CLI**（仅首次需要）
 
 ```bash
 curl -fsSL https://skillhub-1251783334.cos.ap-guangzhou.myqcloud.com/install/install.sh | bash
 ```
 
-**第二步：安装技能**
+**全部技能安装/卸载以本页下方「七件套全部可使用的技能」或 [SKILLS-EVALUATION.md §6.3](./SKILLS-EVALUATION.md) 为准。** 安装后目录名需与 config 中 `skills` 一致。投稿/发布类技能通常需浏览器登录或 B 站凭证，勿在 TOOLS.md 或工作区存凭证。
 
-**ClawHub**
+### 七件套全部可使用的技能：全部安装 / 全部卸载命令
+
+与 [SKILLS-EVALUATION.md §6.3](./SKILLS-EVALUATION.md) 一致。
+
+**全部安装命令**
 
 ```bash
-clawhub search bilibili
+# ClawHub
 clawhub install bilibili-hot-monitor
 clawhub install bilibili-update-viewer
 clawhub install bilibili-helper
@@ -92,14 +98,35 @@ clawhub install bilibili-subtitle-download-skill
 clawhub install bilibili-video-publish
 clawhub install bilibili-upload
 clawhub install bilibili-analytics
+
+# skills.sh
+npx skills add jimliu/baoyu-skills --skill baoyu-format-markdown -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-cover-image -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-article-illustrator -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-translate -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-infographic -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-comic -y -g
 ```
 
-**skills.sh（Baoyu，用于 viral-breakdown、write）**
+**全部卸载命令**
 
 ```bash
-npx skills add jimliu/baoyu-skills --skill baoyu-format-markdown -y -g;
-npx skills add jimliu/baoyu-skills --skill baoyu-cover-image -y -g;
-npx skills add jimliu/baoyu-skills --skill baoyu-article-illustrator -y -g;
+# ClawHub
+clawhub uninstall bilibili-hot-monitor
+clawhub uninstall bilibili-update-viewer
+clawhub uninstall bilibili-helper
+clawhub uninstall bilibili-subtitle-download-skill
+clawhub uninstall bilibili-video-publish
+clawhub uninstall bilibili-upload
+clawhub uninstall bilibili-analytics
+
+# skills.sh
+npx skills remove baoyu-format-markdown
+npx skills remove baoyu-cover-image
+npx skills remove baoyu-article-illustrator
+npx skills remove baoyu-translate
+npx skills remove baoyu-infographic
+npx skills remove baoyu-comic
 ```
 
 ## 配置说明

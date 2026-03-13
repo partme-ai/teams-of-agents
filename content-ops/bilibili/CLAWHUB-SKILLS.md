@@ -75,6 +75,10 @@ B 站视频搜索与数据分析：抓取指定关键词搜索结果、生成统
 
 ---
 
+## 推荐安装清单
+
+本渠道**能用上的全要**时，以 [SKILLS-EVALUATION.md §6.3](./SKILLS-EVALUATION.md) 及 [README 全部安装/全部卸载](./README.md) 为准。ClawHub 段见技能总表；skills.sh 段为 Baoyu（format-markdown、cover-image、article-illustrator、translate、infographic、comic）。
+
 ## 安装、更新与卸载
 
 ### 安装

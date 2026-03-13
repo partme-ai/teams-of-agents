@@ -64,15 +64,15 @@
 
 下表为按步骤/Agent 的最终推荐技能清单，与第二节能力映射一致；同能力只选一个来源，ClawHub 按评分优选。
 
-| 序号 | 步骤 | Agent id | 推荐技能 | 来源 | 说明 |
-|------|------|----------|----------|------|------|
-| 1 | 1 | xiaohongshu-hot-monitor | baoyu-url-to-markdown, baoyu-format-markdown；xiaohongshu-mcp, xiaohongshu-cn | skills.sh；ClawHub | 抓取+日报；ClawHub 趋势（按评分优选） |
-| 2 | 2 | xiaohongshu-viral-breakdown | baoyu-format-markdown；xiaohongshu-mcp, xiaohongshu-cn, xiaohongshu-deep-research, xiaohongshu-search-summarizer | skills.sh；ClawHub | 拆解格式+搜索/调研/总结（按评分优选） |
-| 3 | 3a | xiaohongshu-rewrite | baoyu-xhs-images, baoyu-cover-image, baoyu-article-illustrator；可选 xiaohongshu-content | skills.sh；ClawHub | 配图为主；可选内容策略 |
-| 4 | 3b | xiaohongshu-write | 同上；可选 xiaohongshu-founder-growth-writer | skills.sh；ClawHub | 同 rewrite；可选成长向写作 |
-| 5 | 4 | xiaohongshu-publisher | baoyu-compress-image；xiaohongshu-mcp（或 mcp-skill/mcp-skills/assistant-operator 选一） | skills.sh；ClawHub | 压缩+发布（同质只装一个） |
-| 6 | 5 | xiaohongshu-data-assistant | baoyu-format-markdown；xiaohongshu-cn, xiaohongshu-mcp, xiaohongshu-deep-research, xiaohongshu-api, xiaohongshu-search-summarizer | skills.sh；ClawHub | 报告格式+数据分析（按评分优选） |
-| 7 | 6 | xiaohongshu-comment-manager | xiaohongshu-mcp 或 xiaohongshu-mcp-skills；xiaohongshu-reply-assistant 按需 | ClawHub | 评论/回复（同质选一） |
+| 步骤 | Agent id | 推荐技能 | 来源 | 说明 |
+|------|----------|----------|------|------|
+| 1 | xiaohongshu-hot-monitor | baoyu-url-to-markdown, baoyu-format-markdown；xiaohongshu-mcp, xiaohongshu-cn | skills.sh；ClawHub | 抓取+日报；ClawHub 趋势（按评分优选） |
+| 2 | xiaohongshu-viral-breakdown | baoyu-format-markdown；xiaohongshu-mcp, xiaohongshu-cn, xiaohongshu-deep-research, xiaohongshu-search-summarizer | skills.sh；ClawHub | 拆解格式+搜索/调研/总结（按评分优选） |
+| 3a | xiaohongshu-rewrite | baoyu-xhs-images, baoyu-cover-image, baoyu-article-illustrator；可选 xiaohongshu-content | skills.sh；ClawHub | 配图为主；可选内容策略 |
+| 3b | xiaohongshu-write | 同上；可选 xiaohongshu-founder-growth-writer | skills.sh；ClawHub | 同 rewrite；可选成长向写作 |
+| 4 | xiaohongshu-publisher | baoyu-compress-image；xiaohongshu-mcp（或 mcp-skill/mcp-skills/assistant-operator 选一） | skills.sh；ClawHub | 压缩+发布（同质只装一个） |
+| 5 | xiaohongshu-data-assistant | baoyu-format-markdown；xiaohongshu-cn, xiaohongshu-mcp, xiaohongshu-deep-research, xiaohongshu-api, xiaohongshu-search-summarizer | skills.sh；ClawHub | 报告格式+数据分析（按评分优选） |
+| 6 | xiaohongshu-comment-manager | xiaohongshu-mcp 或 xiaohongshu-mcp-skills；xiaohongshu-reply-assistant 按需 | ClawHub | 评论/回复（同质选一） |
 
 ---
 
@@ -121,24 +121,24 @@ curl -fsSL https://skillhub-1251783334.cos.ap-guangzhou.myqcloud.com/install/ins
 
 | 环节 | 必备技能 | 来源 |
 |------|----------|------|
-| 1 热门监控 | baoyu-url-to-markdown, baoyu-format-markdown；xiaohongshu-mcp, xiaohongshu-cn | skills.sh；ClawHub |
-| 2 爆款拆解 | baoyu-format-markdown；xiaohongshu-mcp, xiaohongshu-cn, xiaohongshu-deep-research, xiaohongshu-search-summarizer | skills.sh；ClawHub |
-| 3a/3b 二创/原创 | baoyu-xhs-images, baoyu-cover-image, baoyu-article-illustrator；xiaohongshu-content, xiaohongshu-founder-growth-writer | skills.sh；ClawHub |
-| 4 自动发布 | baoyu-compress-image；xiaohongshu-mcp（或 mcp-skill/mcp-skills/assistant-operator 选一） | skills.sh；ClawHub |
-| 5 数据助手 | baoyu-format-markdown；xiaohongshu-cn, xiaohongshu-mcp, xiaohongshu-deep-research, xiaohongshu-api, xiaohongshu-search-summarizer | skills.sh；ClawHub |
-| 6 评论管理 | xiaohongshu-mcp 或 xiaohongshu-mcp-skills；xiaohongshu-reply-assistant 按需 | ClawHub |
+| 热门监控 | baoyu-url-to-markdown, baoyu-format-markdown；xiaohongshu-mcp, xiaohongshu-cn | skills.sh；ClawHub |
+| 爆款拆解 | baoyu-format-markdown；xiaohongshu-mcp, xiaohongshu-cn, xiaohongshu-deep-research, xiaohongshu-search-summarizer | skills.sh；ClawHub |
+| 二创/原创 | baoyu-xhs-images, baoyu-cover-image, baoyu-article-illustrator；xiaohongshu-content, xiaohongshu-founder-growth-writer | skills.sh；ClawHub |
+| 自动发布 | baoyu-compress-image；xiaohongshu-mcp（或 mcp-skill/mcp-skills/assistant-operator 选一） | skills.sh；ClawHub |
+| 数据助手 | baoyu-format-markdown；xiaohongshu-cn, xiaohongshu-mcp, xiaohongshu-deep-research, xiaohongshu-api, xiaohongshu-search-summarizer | skills.sh；ClawHub |
+| 评论管理 | xiaohongshu-mcp 或 xiaohongshu-mcp-skills；xiaohongshu-reply-assistant 按需 | ClawHub |
 
 **补充技能（按需选装）**
 
-| 补充能力 | 技能 | 来源 |
-|----------|------|------|
-| 标题筛选/优化、写作辅导 | xiaohongshu-content、xiaohongshu-algorithm-optimizer、xhs-writing-coach | ClawHub |
-| 爆款/视频筛选 | xhs-video-finder | ClawHub |
-| 审核与复盘 | openclaw-xiaohongshu-ops 或 clawnote | ClawHub |
-| 视频下载与分析 | xhs-video-downloader、xhs-video-analyzer | ClawHub |
-| 评论破冰 | xiaohongshu-first-line | ClawHub |
-| 多语言 | baoyu-translate | skills.sh |
-| 信息图/漫画风 | baoyu-infographic、baoyu-comic | skills.sh |
+| 序号 | 补充能力 | 技能 | 来源 |
+|------|----------|------|------|
+| 1 | 标题筛选/优化、写作辅导 | xiaohongshu-content、xiaohongshu-algorithm-optimizer、xhs-writing-coach | ClawHub |
+| 2 | 爆款/视频筛选 | xhs-video-finder | ClawHub |
+| 3 | 审核与复盘 | openclaw-xiaohongshu-ops 或 clawnote | ClawHub |
+| 4 | 视频下载与分析 | xhs-video-downloader、xhs-video-analyzer | ClawHub |
+| 5 | 评论破冰 | xiaohongshu-first-line | ClawHub |
+| 6 | 多语言 | baoyu-translate | skills.sh |
+| 7 | 信息图/漫画风 | baoyu-infographic、baoyu-comic | skills.sh |
 
 ### 7.3 全部不冲突：全部安装命令与全部卸载命令
 

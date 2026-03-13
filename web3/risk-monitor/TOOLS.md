@@ -7,7 +7,7 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 Things like:
 
 - Alert policy and severity thresholds
-- Scan schedule (if not fully Cron-driven)
+- Scan schedule (if not fully Cron-driven)；**Cron 驱动的机会推送**流程与配置见 web3 根目录 `../CRON-OPPORTUNITY-PUSH.md`
 - Plugin tool aliases (check_risk, scan_alerts)
 - Data source notes
 - Anything environment-specific

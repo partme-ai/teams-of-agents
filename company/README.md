@@ -4,7 +4,7 @@
 
 ## 目录结构（按建议拆分）
 
-- **internal/** — 对内支撑：行政、运营、商务、老板/老板娘助理（流程、草稿、不代审批）。
+- **internal/** — 对内支撑：行政、运营、商务、老板/老板娘助理（流程、草稿、不代审批）；**6-content-ops-assistant/** 为渠道运营助理（小红书、公众号、视频号、抖音、B站、知乎、百家号、微博、掘金、头条号、快手），每渠道一个运营助理，可委派到该渠道七件套。
 - **customer/** — 对外客服：客服助理、客服专员-小暖（话术、工单、权限）。
 
 ## 智能体清单
@@ -19,7 +19,7 @@
 | 6 | cs-assistant | 客服助理 | customer/6-cs-assistant | **对内**：辅助客服人员提升能力；话术检索与建议、公司业务与行业知识（话术/业务/行业信息后续提供） |
 | 7 | cs-specialist-xiaonuan | 客服专员-小暖 | customer/7-cs-specialist-xiaonuan | **对外**：智能客服「小暖」；根据行业内容、业务话术、公司业务服务客户，语气温暖贴心 |
 
-**说明：** 小红书七件套已独立为 `content-ops/xiaohongshu/` 管线，见 `config/openclaw-xiaohongshu-fragment.json`。本片段（openclaw-company-fragment.json）中若仍含部分 xiaohongshu 条目，可与 xiaohongshu 片段二选一或统一 workspace 指向 `content-ops/xiaohongshu/` 目录。
+**说明：** 小红书等渠道七件套已独立为 `content-ops/<channel>/` 管线，见 `config/README.md`。渠道运营助理（internal/6-content-ops-assistant）采用**单 Agent 委派**：仅该运营助理可委派到其渠道七件套，配置见 [internal/6-content-ops-assistant/README.md](internal/6-content-ops-assistant/README.md)。
 
 ## 配置说明
 
@@ -74,6 +74,44 @@ openclaw agents bind --agent cs-specialist-xiaonuan --bind wecom:cs-specialist-x
 ```bash
 openclaw agents bind --agent cs-specialist-xiaonuan --bind webchat:xiaonuan
 ```
+
+### 5. 渠道运营助理（11 个）
+
+渠道运营助理需单独配置**单 Agent 委派**（仅该助理可委派到其渠道七件套），详见 [internal/6-content-ops-assistant/README.md](internal/6-content-ops-assistant/README.md)。以下为添加与绑定命令示例。
+
+**添加 11 个渠道运营助理**（workspace 指向本仓库 `company/internal/6-content-ops-assistant/<id>/`，部署时复制或链接到 `~/.openclaw/workspace-<id>`）：
+
+```bash
+openclaw agents add xiaohongshu-ops-assistant      --workspace ~/.openclaw/workspace-xiaohongshu-ops-assistant;
+openclaw agents add wechat-article-ops-assistant  --workspace ~/.openclaw/workspace-wechat-article-ops-assistant;
+openclaw agents add wechat-video-ops-assistant    --workspace ~/.openclaw/workspace-wechat-video-ops-assistant;
+openclaw agents add douyin-ops-assistant          --workspace ~/.openclaw/workspace-douyin-ops-assistant;
+openclaw agents add bilibili-ops-assistant        --workspace ~/.openclaw/workspace-bilibili-ops-assistant;
+openclaw agents add zhihu-ops-assistant           --workspace ~/.openclaw/workspace-zhihu-ops-assistant;
+openclaw agents add baijiahao-ops-assistant       --workspace ~/.openclaw/workspace-baijiahao-ops-assistant;
+openclaw agents add weibo-ops-assistant           --workspace ~/.openclaw/workspace-weibo-ops-assistant;
+openclaw agents add juejin-ops-assistant          --workspace ~/.openclaw/workspace-juejin-ops-assistant;
+openclaw agents add toutiao-ops-assistant         --workspace ~/.openclaw/workspace-toutiao-ops-assistant;
+openclaw agents add kuaishou-ops-assistant        --workspace ~/.openclaw/workspace-kuaishou-ops-assistant;
+```
+
+**按渠道绑定运营助理（示例：企微 wecom）**：将对应渠道会话路由到该渠道运营助理。
+
+```bash
+openclaw agents bind --agent xiaohongshu-ops-assistant     --bind wecom:xiaohongshu-ops;
+openclaw agents bind --agent wechat-article-ops-assistant  --bind wecom:wechat-article-ops;
+openclaw agents bind --agent wechat-video-ops-assistant   --bind wecom:wechat-video-ops;
+openclaw agents bind --agent douyin-ops-assistant          --bind wecom:douyin-ops;
+openclaw agents bind --agent bilibili-ops-assistant        --bind wecom:bilibili-ops;
+openclaw agents bind --agent zhihu-ops-assistant           --bind wecom:zhihu-ops;
+openclaw agents bind --agent baijiahao-ops-assistant       --bind wecom:baijiahao-ops;
+openclaw agents bind --agent weibo-ops-assistant           --bind wecom:weibo-ops;
+openclaw agents bind --agent juejin-ops-assistant          --bind wecom:juejin-ops;
+openclaw agents bind --agent toutiao-ops-assistant         --bind wecom:toutiao-ops;
+openclaw agents bind --agent kuaishou-ops-assistant        --bind wecom:kuaishou-ops;
+```
+
+其他渠道将 `wecom` 替换为 `feishu`、`webchat` 等即可。委派配置（`tools.agentToAgent` 仅对上述运营助理开放）须在 `openclaw.json` 中按 [README.md](internal/6-content-ops-assistant/README.md) 示例合并。
 
 ## 文件结构（每智能体）
 

@@ -2,11 +2,22 @@
 
 > 来源：[ClawHub — 按 weixin / 视频号 搜索](https://clawhub.ai/skills?sort=downloads&q=weixin)。安装方式：`clawhub install <slug>`。若当前无或较少，以本目录 README 下方技能表与 baoyu 系列为主；安装：`npx skills add <owner/repo> --skill <名>`。发布依赖视频号开放能力或浏览器自动化。
 
-## 技能总表（按下载量排序）
+## 技能总表（按下载量排序，待补充）
 
-| # | Slug | 名称/功能摘要 | 备注 |
-|---|------|----------------|------|
-| （待补充） | — | 请在 ClawHub 查看 weixin / 视频号 相关技能 | 视频号管线可优先用 skills.sh + baoyu |
+| 序号 | Slug | 名称/功能摘要 | 七件套适用环节 | 备注 |
+|------|------|----------------|----------------|------|
+| （待补充） | — | 请在 ClawHub 查看 weixin / 视频号 相关技能 | — | 视频号管线当前以 skills.sh Baoyu 为主；可选 wechat-video-publish |
+
+## 与七件套的对应建议
+
+- **热门监控 / 爆款拆解 / 数据助手**：以 skills.sh（baoyu-url-to-markdown, baoyu-format-markdown）为主。
+- **二创 / 写作**：以 skills.sh Baoyu 配图为主（baoyu-cover-image, baoyu-article-illustrator）。
+- **发布**：可选 wechat-video-publish（ClawHub）；压缩用 baoyu-compress-image。
+- **评论管理**：按需 ClawHub/skills.sh。
+
+## 推荐安装清单
+
+本渠道**能用上的全要**时，以 [SKILLS-EVALUATION.md §6.3](./SKILLS-EVALUATION.md) 及 [README 全部安装/全部卸载](./README.md) 为准。
 
 ## 安装、更新与卸载
 

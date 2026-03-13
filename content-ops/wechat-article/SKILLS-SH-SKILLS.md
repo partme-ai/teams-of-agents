@@ -169,14 +169,18 @@ npx skills add bbwdadfg/wechat-ai-publisher --skill wechat-ai-publisher -y -g;
 - **命令**：`npx skills remove <技能名>`（技能名与安装后目录名一致）
 - 或手动删除：项目安装为 `./.skills/<技能名>`，全局安装为 `~/.skills/<技能名>`。
 
-## 与公众号四件套的对应建议（skills.sh）
+## 与七件套对应建议（skills.sh）
 
-| wechat-article Agent | 可选的 skills.sh 技能 |
-|----------------------|------------------------|
-| 1-wechat-article-viral-breakdown | wechat-article-extractor（freestylefly/liaosvcaf）、wechat-article-search、wechat-article-fetcher、wechat-article-to-markdown、fetch-wechat-article、baoyu-format-markdown |
-| 2-wechat-article-rewrite | wechat-article-writer、wechat-title-optimizer、wechat-content-optimizer、wechat-article-formatter、baoyu-cover-image、baoyu-article-illustrator、huashu-wechat-image |
-| 3-wechat-article-publisher | wechat-article-publisher、wechat-ai-publisher、wechat-draft-publisher、wechat-publisher（多仓库）、baoyu-post-to-wechat、baoyu-markdown-to-html、baoyu-compress-image、md2wechat、publish-md-to-wechat、md-to-wechat |
-| 4-wechat-article-data-assistant | wechat-daily-report、wechat-summary、wechat-article-aggregator、baoyu-format-markdown |
+| 序号 | 渠道 Agent | 可选的 skills.sh 技能（ClawHub 未覆盖时） |
+|------|------------|------------------------------------------|
+| 1 | wechat-article-hot-monitor | baoyu-url-to-markdown, baoyu-format-markdown |
+| 2 | wechat-article-viral-breakdown | wechat-article-extractor（freestylefly）、baoyu-format-markdown |
+| 3 | wechat-article-rewrite / wechat-article-write | baoyu-cover-image, baoyu-article-illustrator；可选 baoyu-infographic, baoyu-comic |
+| 4 | wechat-article-publisher | baoyu-post-to-wechat, baoyu-markdown-to-html, baoyu-compress-image |
+| 5 | wechat-article-data-assistant | baoyu-format-markdown |
+| 6 | wechat-article-comment-manager | 按需 ClawHub/skills.sh |
+
+**全部安装/全部卸载**以 [SKILLS-EVALUATION.md §8.3](./SKILLS-EVALUATION.md) 或 README「七件套全部可使用的技能」为准。
 
 ---
 

@@ -390,6 +390,10 @@
 
 上述对应仅供参考；实际以各 agent 的 TOOLS.md 及运行环境为准。README 中已列出的 **wechat-article-extractor**、**wechat-ai-publisher** 等以 `clawhub search wechat` 结果为准，若存在则优先选用。
 
+## 推荐安装清单
+
+本渠道**能用上的全要**时，以 [SKILLS-EVALUATION.md §8.3](./SKILLS-EVALUATION.md) 及 [README 全部安装/全部卸载](./README.md) 为准。ClawHub 段：wechat-article-search、wechat-mp-cn、wechat-auto-reply-assistant、scrapling-web-fetch；skills.sh 段见 8.3。
+
 ---
 
 ## 安装、更新与卸载

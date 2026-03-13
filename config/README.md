@@ -25,6 +25,7 @@
 | `openclaw-telegram-fragment.json` | **Telegram 专用**：telegram-bot-developer、telegram-community、telegram-support；仓库路径 `channels/telegram/`。 |
 | `openclaw-game-fragment.json` | **游戏**：game-master 等；workspace 为 `~/.openclaw/workspace-<agentId>`。 |
 | `openclaw-xiaohongshu-fragment.json` | **小红书管线**：xiaohongshu 七件套；仓库路径 `content-ops/xiaohongshu/`。 |
+| `openclaw-xiaohongshu-ops-delegation-example.json` | **小红书运营助理 + 单 Agent 委派示例**：全局 `tools.agentToAgent.enabled: false`，仅 `xiaohongshu-ops-assistant` 在 `agents.list[]` 中配置委派到七件套；仓库路径 `company/internal/xiaohongshu-ops-assistant` + `content-ops/xiaohongshu/`。 |
 | `openclaw-bilibili-fragment.json` | **B站 (bilibili) 管线**：bilibili 七件套；仓库路径 `content-ops/bilibili/`。 |
 | `openclaw-zhihu-fragment.json` | **知乎管线**：zhihu 七件套；仓库路径 `content-ops/zhihu/`。 |
 | `openclaw-baijiahao-fragment.json` | **百家号管线**：baijiahao 七件套；仓库路径 `content-ops/baijiahao/`。 |
@@ -79,6 +80,70 @@
 - **workspace 路径**：`~/.openclaw/workspace-xiaohongshu-*`；部署时将仓库 `content-ops/xiaohongshu/1-...`～`content-ops/xiaohongshu/7-...` 复制或链接到对应 workspace。
 - **技能安装**：先在 [ClawHub](https://clawhub.ai/skills?sort=downloads&q=xiaohongshu) 搜索并安装小红书相关技能；未覆盖处用 skills.sh 的 baoyu-* 技能补充。详见 [content-ops/xiaohongshu/README.md](../content-ops/xiaohongshu/README.md)。
 - **合并方式**：若仅用小红书管线可单独合并本片段；若已合并 company 片段，本片段与 company 中可能含的 xiaohongshu 条目 id 相同，可二选一或统一 workspace 指向 `content-ops/xiaohongshu/` 目录。
+
+### 渠道运营助理委派：单 Agent 配置（一对多）
+
+若使用 **渠道专用运营智能体**（如 [company/internal/xiaohongshu-ops-assistant](../company/internal/xiaohongshu-ops-assistant)），希望**仅该运营助理**能委派到本渠道七件套，其他 Agent 不能委派，应采用 **单 Agent 配置**，而非全局 `tools.agentToAgent`。
+
+| 配置位置 | 作用范围 |
+|----------|----------|
+| `tools.agentToAgent` | 全局默认，所有 Agent 继承 |
+| `agents.list[].tools.agentToAgent` | 仅对该 Agent 生效（覆盖全局） |
+
+**优先级：** Agent 级别的配置 > 全局配置。参考 [OpenClaw Tools - Agent 覆盖](https://docs.openclaw.ai/tools#tool-profiles-base-allowlist)。
+
+**做法：**
+
+1. 全局关闭或清空委派：`tools.agentToAgent.enabled: false` 或 `allow: []`。
+2. 在 `agents.list[]` 中**仅**为运营助理这一条增加 `tools.agentToAgent`，例如：
+
+```json
+{
+  "tools": {
+    "profile": "full",
+    "agentToAgent": {
+      "enabled": false
+    }
+  },
+  "agents": {
+    "list": [
+      {
+        "id": "xiaohongshu-ops-assistant",
+        "default": true,
+        "name": "小红书运营助理",
+        "workspace": "~/.openclaw/workspace-xiaohongshu-ops-assistant",
+        "agentDir": "~/.openclaw/agents/xiaohongshu-ops-assistant/agent",
+        "tools": {
+          "agentToAgent": {
+            "enabled": true,
+            "allow": [
+              "xiaohongshu-ops-assistant",
+              "xiaohongshu-hot-monitor",
+              "xiaohongshu-viral-breakdown",
+              "xiaohongshu-rewrite",
+              "xiaohongshu-write",
+              "xiaohongshu-publisher",
+              "xiaohongshu-data-assistant",
+              "xiaohongshu-comment-manager"
+            ]
+          }
+        }
+      },
+      { "id": "xiaohongshu-hot-monitor", "name": "小红书热门监控", "workspace": "~/.openclaw/workspace-xiaohongshu-hot-monitor", "agentDir": "~/.openclaw/agents/xiaohongshu-hot-monitor/agent" },
+      { "id": "xiaohongshu-viral-breakdown", "name": "小红书爆款拆解", "workspace": "~/.openclaw/workspace-xiaohongshu-viral-breakdown", "agentDir": "~/.openclaw/agents/xiaohongshu-viral-breakdown/agent" },
+      { "id": "xiaohongshu-rewrite", "name": "小红书二创", "workspace": "~/.openclaw/workspace-xiaohongshu-rewrite", "agentDir": "~/.openclaw/agents/xiaohongshu-rewrite/agent" },
+      { "id": "xiaohongshu-write", "name": "小红书原创", "workspace": "~/.openclaw/workspace-xiaohongshu-write", "agentDir": "~/.openclaw/agents/xiaohongshu-write/agent" },
+      { "id": "xiaohongshu-publisher", "name": "小红书自动发布", "workspace": "~/.openclaw/workspace-xiaohongshu-publisher", "agentDir": "~/.openclaw/agents/xiaohongshu-publisher/agent" },
+      { "id": "xiaohongshu-data-assistant", "name": "小红书数据助手", "workspace": "~/.openclaw/workspace-xiaohongshu-data-assistant", "agentDir": "~/.openclaw/agents/xiaohongshu-data-assistant/agent" },
+      { "id": "xiaohongshu-comment-manager", "name": "小红书评论管理", "workspace": "~/.openclaw/workspace-xiaohongshu-comment-manager", "agentDir": "~/.openclaw/agents/xiaohongshu-comment-manager/agent" }
+    ]
+  }
+}
+```
+
+其他渠道（公众号、视频号、抖音、B站等）同理：全局不开放委派，仅在对应 `agents.list[]` 中为 `<platform>-ops-assistant` 一项配置 `tools.agentToAgent`，实现**内部一对多**（仅该运营助理可委派到其 7 件套）。
+
+可直接合并示例片段：[openclaw-xiaohongshu-ops-delegation-example.json](openclaw-xiaohongshu-ops-delegation-example.json)。
 
 ## B站 (bilibili) 管线（openclaw-bilibili-fragment.json）
 

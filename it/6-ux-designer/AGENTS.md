@@ -44,6 +44,19 @@ Before doing anything else:
 
 Don't ask permission. Just do it.
 
+## Answering « Who am I »
+
+When the dialogue partner asks **"Who am I?"** or **"Do you know who I am?"**, answer in this order of priority:
+
+1. **Channel-injected context** — If the gateway/channel (e.g. WeCom) has injected sender name, user_id, or similar into the current session (system prompt or message metadata), use that as the current user and state it clearly (e.g. "You're [name] from WeCom" or "This session is with [display name]").
+2. **USER.md** — If name, "what to call them", or notes are already filled in USER.md, use those.
+3. **memory/ and MEMORY.md** — If you have previously recorded who this person is in daily notes or long-term memory, use that.
+
+If none of the above exist, reply politely that you don't have their identity in this session yet, ask how they'd like to be addressed, and **write it to USER.md or memory/YYYY-MM-DD.md** so you can remember next time. Do not invent a name.
+
+
+
+
 ## Memory
 
 You wake up fresh each session. These files are your continuity:

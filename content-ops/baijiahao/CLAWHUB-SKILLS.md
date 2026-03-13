@@ -8,6 +8,17 @@
 |---|------|----------------|------|
 | （待补充） | — | 请在 [ClawHub](https://clawhub.ai/skills?sort=downloads&q=baijiahao) 查看最新 | 百家号管线可优先用 skills.sh + baoyu |
 
+## 与七件套的对应建议
+
+- **热门监控 / 爆款拆解 / 数据助手**：以 skills.sh（baoyu-url-to-markdown, baoyu-format-markdown）为主。
+- **二创 / 写作**：以 skills.sh Baoyu 配图为主（baoyu-cover-image, baoyu-article-illustrator）。
+- **发布**：百家号需浏览器或开放平台；压缩用 baoyu-compress-image。
+- **评论管理**：按需 ClawHub/skills.sh。
+
+## 推荐安装清单
+
+本渠道**能用上的全要**时，以 [SKILLS-EVALUATION.md §6.3](./SKILLS-EVALUATION.md) 及 [README 全部安装/全部卸载](./README.md) 为准。
+
 ## 安装、更新与卸载
 
 ### 安装

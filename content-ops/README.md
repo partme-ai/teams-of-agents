@@ -9,7 +9,7 @@
 | 公众号 | [wechat-article](./wechat-article/) | 微信公众号文章管线 |
 | 小红书 | [xiaohongshu](./xiaohongshu/) | 小红书内容管线 |
 | 抖音 | [douyin](./douyin/) | 抖音短视频管线 |
-| B 站 | [bilibili](./bilibili/) | B 站视频管线 |
+| B站 | [bilibili](./bilibili/) | B 站视频管线 |
 | 微博 | [weibo](./weibo/) | 微博管线 |
 | 知乎 | [zhihu](./zhihu/) | 知乎管线 |
 | 头条号 | [toutiao](./toutiao/) | 头条号管线 |

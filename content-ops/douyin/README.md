@@ -2,25 +2,29 @@
 
 > 基于 [ANALYSIS-渠道与流程对齐 OctoFlow](../../ANALYSIS-渠道与流程对齐OctoFlow.md) §2.1 建议，为**抖音**（短视频）提供与 xiaohongshu / wechat-article 同构的内容管线七件套：热门监控、爆款拆解、二创、自动发布、数据助手、写作、评论管理。读（抓取）优先官方 API，无 API 时可用 yt-dlp 类；写（发布）需抖音开放平台 API 或浏览器自动化。**合规与平台 ToS 需严格遵守。**
 
-## 技能来源区分
+## 技能选型
 
-| 来源 | 搜索链接 | 技能一览文档 | 安装命令 |
-|------|----------|--------------|----------|
-| **ClawHub（为主）** | [clawhub.ai/skills?q=douyin](https://clawhub.ai/skills?sort=downloads&q=douyin) | [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) | `clawhub install <slug>` |
-| **skills.sh（取最优）** | [skills.sh/?q=douyin](https://skills.sh/?q=douyin)、[skills.sh/?q=baoyu](https://skills.sh/?q=baoyu) | [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md) | `npx skills add <owner/repo> --skill <名>` |
+| 序号 | 来源 | 搜索链接 | 技能一览文档 | 安装命令 |
+|------|------|----------|--------------|----------|
+| 1 | **ClawHub（为主）** | [clawhub.ai/skills?q=douyin](https://clawhub.ai/skills?sort=downloads&q=douyin) | [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) | `clawhub install <slug>` |
+| 2 | **skills.sh（取最优）** | [skills.sh/?q=douyin](https://skills.sh/?q=douyin)、[skills.sh/?q=baoyu](https://skills.sh/?q=baoyu) | [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md) | `npx skills add <owner/repo> --skill <名>` |
 
 ## 技能评估结论（摘录）
 
 > 完整评估见 [SKILLS-EVALUATION.md](./SKILLS-EVALUATION.md)。原则：**ClawHub 为主、skills.sh 取最优；同能力只保留一个最优技能。**
 
-| 能力 | 首选 | 备选/不重复装 |
-|------|------|----------------|
-| 链接→Markdown/日报格式 | baoyu-url-to-markdown, baoyu-format-markdown | — |
-| 抖音热榜/热搜 | douyin-hot-trend（ClawHub） | — |
-| 抖音视频下载 | douyin-downloader / douyin-video-fetch | 同质只装一处 |
-| 封面/配图 | baoyu-cover-image, baoyu-article-illustrator | — |
-| 发布到抖音 | douyin-publish（ClawHub） | 同质只选一 |
-| 图片压缩 | baoyu-compress-image | — |
+| 序号 | 能力 | 首选 | 备选/不重复装 |
+|------|------|------|----------------|
+| 1 | 链接→Markdown/日报格式 | baoyu-url-to-markdown, baoyu-format-markdown | — |
+| 2 | 抖音热榜/热搜 | douyin-hot-trend（ClawHub） | — |
+| 3 | 抖音视频下载 | douyin-downloader / douyin-video-fetch | 同质只装一处 |
+| 4 | 封面/配图 | baoyu-cover-image, baoyu-article-illustrator | — |
+| 5 | 发布到抖音 | douyin-publish（ClawHub） | 同质只选一 |
+| 6 | 图片压缩 | baoyu-compress-image | — |
+
+## 补充能力（完整栈）
+
+七件套之外本管线可用上的补充能力（与 [SKILLS-EVALUATION.md §6.1](./SKILLS-EVALUATION.md) 一致）：评论回复/采集、多语言与翻译、信息图/漫画风配图；推荐技能见 6.1 表。
 
 ## 必须保证的七个环节
 
@@ -78,35 +82,56 @@
 | 5 | douyin-data-assistant   | baoyu-format-markdown | skills.sh | 报告格式 |
 | 6 | douyin-comment-manager  | （按需选评论采集与回复技能） | ClawHub/skills.sh | 评论拉取、回复草稿 |
 
-### 安装命令（按来源与链路顺序）
+### 安装前置与唯一命令来源
 
-安装后目录名需与 config 中 `skills` 一致。**勿在 TOOLS.md 存凭证。** 发布与抓取须遵守抖音开放平台与平台 ToS。
-
-**第一步：安装 SkillHub CLI**
+**第一步：安装 SkillHub CLI**（仅首次需要）
 
 ```bash
 curl -fsSL https://skillhub-1251783334.cos.ap-guangzhou.myqcloud.com/install/install.sh | bash
 ```
 
-**第二步：安装技能**
+**全部技能安装/卸载以本页下方「七件套全部可使用的技能」或 [SKILLS-EVALUATION.md §6.3](./SKILLS-EVALUATION.md) 为准。** 安装后目录名需与 config 中 `skills` 一致。勿在 TOOLS.md 存凭证。发布与抓取须遵守抖音开放平台与平台 ToS。
 
-**ClawHub**
+### 七件套全部可使用的技能：全部安装 / 全部卸载命令
+
+与 [SKILLS-EVALUATION.md §6.3](./SKILLS-EVALUATION.md) 一致。
+
+**全部安装命令**
 
 ```bash
-clawhub search douyin
+# ClawHub
 clawhub install douyin-hot-trend
 clawhub install douyin-downloader
 clawhub install douyin-publish
+
+# skills.sh
+npx skills add jimliu/baoyu-skills --skill baoyu-url-to-markdown -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-format-markdown -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-cover-image -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-article-illustrator -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-compress-image -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-translate -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-infographic -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-comic -y -g
 ```
 
-**skills.sh（Baoyu）**
+**全部卸载命令**
 
 ```bash
-npx skills add jimliu/baoyu-skills --skill baoyu-url-to-markdown -y -g;
-npx skills add jimliu/baoyu-skills --skill baoyu-format-markdown -y -g;
-npx skills add jimliu/baoyu-skills --skill baoyu-cover-image -y -g;
-npx skills add jimliu/baoyu-skills --skill baoyu-article-illustrator -y -g;
-npx skills add jimliu/baoyu-skills --skill baoyu-compress-image -y -g;
+# ClawHub
+clawhub uninstall douyin-hot-trend
+clawhub uninstall douyin-downloader
+clawhub uninstall douyin-publish
+
+# skills.sh
+npx skills remove baoyu-url-to-markdown
+npx skills remove baoyu-format-markdown
+npx skills remove baoyu-cover-image
+npx skills remove baoyu-article-illustrator
+npx skills remove baoyu-compress-image
+npx skills remove baoyu-translate
+npx skills remove baoyu-infographic
+npx skills remove baoyu-comic
 ```
 
 ## 配置说明

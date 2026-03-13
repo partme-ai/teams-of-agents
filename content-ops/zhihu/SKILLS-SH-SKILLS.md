@@ -41,6 +41,19 @@ npx skills add jimliu/baoyu-skills --skill baoyu-compress-image
 | baoyu-cover-image | `npx skills add jimliu/baoyu-skills --skill baoyu-cover-image` | `npx skills remove baoyu-cover-image` |
 | 其他 Baoyu | `npx skills add jimliu/baoyu-skills --skill <技能名>` | `npx skills remove <技能名>` |
 
+## 与七件套对应建议
+
+| 序号 | 渠道 Agent | 可选的 skills.sh 技能（ClawHub 未覆盖时） |
+|------|------------|------------------------------------------|
+| 1 | zhihu-hot-monitor | baoyu-url-to-markdown, baoyu-format-markdown |
+| 2 | zhihu-viral-breakdown | baoyu-url-to-markdown, baoyu-format-markdown |
+| 3 | zhihu-rewrite / zhihu-write | baoyu-cover-image, baoyu-article-illustrator；可选 baoyu-infographic, baoyu-comic |
+| 4 | zhihu-publisher | baoyu-compress-image；可选 social-push |
+| 5 | zhihu-data-assistant | baoyu-format-markdown |
+| 6 | zhihu-comment-manager | 按需 ClawHub/skills.sh |
+
+**全部安装/全部卸载**以 [SKILLS-EVALUATION.md §6.3](./SKILLS-EVALUATION.md) 或 README「七件套全部可使用的技能」为准。
+
 ### 更新
 - 重新执行 `npx skills add <owner/repo> --skill <技能名>` 覆盖安装即可；或以 skills.sh CLI 文档为准。
 

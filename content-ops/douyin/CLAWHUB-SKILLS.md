@@ -35,6 +35,10 @@
 
 *安装时以 ClawHub 当前 slug 为准；发布与抓取须遵守抖音开放平台与平台 ToS。*
 
+## 推荐安装清单
+
+本渠道**能用上的全要**时，以 [SKILLS-EVALUATION.md §6.3](./SKILLS-EVALUATION.md) 及 [README 全部安装/全部卸载](./README.md) 为准。ClawHub 段：douyin-hot-trend、douyin-downloader、douyin-publish；skills.sh 段见 6.3。
+
 ## 安装、更新与卸载
 
 ### 安装

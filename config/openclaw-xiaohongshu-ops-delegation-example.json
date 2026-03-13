@@ -1,0 +1,84 @@
+{
+  "tools": {
+    "profile": "full",
+    "agentToAgent": {
+      "enabled": false
+    }
+  },
+  "agents": {
+    "list": [
+      {
+        "id": "xiaohongshu-ops-assistant",
+        "default": true,
+        "name": "小红书运营助理",
+        "workspace": "~/.openclaw/workspace-xiaohongshu-ops-assistant",
+        "agentDir": "~/.openclaw/agents/xiaohongshu-ops-assistant/agent",
+        "tools": {
+          "agentToAgent": {
+            "enabled": true,
+            "allow": [
+              "xiaohongshu-ops-assistant",
+              "xiaohongshu-hot-monitor",
+              "xiaohongshu-viral-breakdown",
+              "xiaohongshu-rewrite",
+              "xiaohongshu-write",
+              "xiaohongshu-publisher",
+              "xiaohongshu-data-assistant",
+              "xiaohongshu-comment-manager"
+            ]
+          }
+        }
+      },
+      {
+        "id": "xiaohongshu-viral-breakdown",
+        "name": "小红书爆款拆解",
+        "workspace": "~/.openclaw/workspace-xiaohongshu-viral-breakdown",
+        "agentDir": "~/.openclaw/agents/xiaohongshu-viral-breakdown/agent",
+        "skills": ["baoyu-url-to-markdown", "baoyu-format-markdown"]
+      },
+      {
+        "id": "xiaohongshu-rewrite",
+        "name": "小红书二创",
+        "workspace": "~/.openclaw/workspace-xiaohongshu-rewrite",
+        "agentDir": "~/.openclaw/agents/xiaohongshu-rewrite/agent",
+        "skills": ["baoyu-xhs-images", "baoyu-cover-image", "baoyu-article-illustrator"]
+      },
+      {
+        "id": "xiaohongshu-publisher",
+        "name": "小红书自动发布",
+        "workspace": "~/.openclaw/workspace-xiaohongshu-publisher",
+        "agentDir": "~/.openclaw/agents/xiaohongshu-publisher/agent",
+        "skills": ["baoyu-compress-image"]
+      },
+      {
+        "id": "xiaohongshu-data-assistant",
+        "name": "小红书数据助手",
+        "workspace": "~/.openclaw/workspace-xiaohongshu-data-assistant",
+        "agentDir": "~/.openclaw/agents/xiaohongshu-data-assistant/agent",
+        "skills": ["baoyu-format-markdown"]
+      },
+      {
+        "id": "xiaohongshu-hot-monitor",
+        "name": "小红书热门监控",
+        "workspace": "~/.openclaw/workspace-xiaohongshu-hot-monitor",
+        "agentDir": "~/.openclaw/agents/xiaohongshu-hot-monitor/agent",
+        "skills": ["baoyu-url-to-markdown", "baoyu-format-markdown"]
+      },
+      {
+        "id": "xiaohongshu-write",
+        "name": "小红书原创",
+        "workspace": "~/.openclaw/workspace-xiaohongshu-write",
+        "agentDir": "~/.openclaw/agents/xiaohongshu-write/agent",
+        "skills": ["baoyu-xhs-images", "baoyu-cover-image", "baoyu-article-illustrator"]
+      },
+      {
+        "id": "xiaohongshu-comment-manager",
+        "name": "小红书评论管理",
+        "workspace": "~/.openclaw/workspace-xiaohongshu-comment-manager",
+        "agentDir": "~/.openclaw/agents/xiaohongshu-comment-manager/agent",
+        "skills": []
+      }
+    ]
+  },
+  "bindings": []
+}

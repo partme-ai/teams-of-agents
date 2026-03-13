@@ -6,40 +6,40 @@
 
 **技能来源区分：**
 
-| 来源 | 搜索链接 | 技能一览文档 | 安装命令 |
-|------|----------|--------------|----------|
-| **ClawHub（优先）** | [clawhub.ai/skills?q=xiaohongshu](https://clawhub.ai/skills?sort=downloads&q=xiaohongshu) | [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) | `clawhub install <slug>` |
-| **skills.sh（后补）** | [skills.sh/?q=xiaohongshu](https://skills.sh/?q=xiaohongshu)、[skills.sh/?q=baoyu](https://skills.sh/?q=baoyu) | [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md) | `npx skills add <owner/repo> --skill <名>` |
+| 序号 | 来源 | 搜索链接 | 技能一览文档 | 安装命令 |
+|------|------|----------|--------------|----------|
+| 1 | **ClawHub（优先）** | [clawhub.ai/skills?q=xiaohongshu](https://clawhub.ai/skills?sort=downloads&q=xiaohongshu) | [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) | `clawhub install <slug>` |
+| 2 | **skills.sh（后补）** | [skills.sh/?q=xiaohongshu](https://skills.sh/?q=xiaohongshu)、[skills.sh/?q=baoyu](https://skills.sh/?q=baoyu) | [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md) | `npx skills add <owner/repo> --skill <名>` |
 
 ## 技能评估结论（摘录）
 
 > 完整评估见 [SKILLS-EVALUATION.md](./SKILLS-EVALUATION.md)。原则：**ClawHub 为主、skills.sh 取最优；同能力只保留一个最优技能。** ClawHub 技能按**评分优选**（见 [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) 表）。  
 > **完整技能栈**（七件套 + 标题筛选、爆款筛选、标题/算法优化、写作辅导、审核复盘、视频分析、多语言等补充）见 [SKILLS-EVALUATION.md § 七、完整技能栈](./SKILLS-EVALUATION.md#七完整技能栈七件套--补充能力)。
 
-| 能力 | 首选（按 ClawHub 评分） | 备选/不重复装 |
-|------|-------------------------|----------------|
-| 链接→Markdown/报告格式 | baoyu-url-to-markdown, baoyu-format-markdown | — |
-| 小红书配图/封面 | baoyu-xhs-images, baoyu-cover-image, baoyu-article-illustrator | — |
-| 发布到小红书 | xiaohongshu-mcp (3.633) | xiaohongshu-mcp-skill、xiaohongshu-mcp-skills、assistant-operator 选一 |
-| 搜索/趋势/分析 | xiaohongshu-mcp, xiaohongshu-cn (3.584) | xiaohongshu-deep-research, xiaohongshu-search-summarizer |
-| 深度调研/拆解 | xiaohongshu-deep-research (3.568), xiaohongshu-search-summarizer (3.275) | — |
-| 内容/写作策略 | xiaohongshu-content (3.349), xiaohongshu-founder-growth-writer (3.338) | — |
-| 图片压缩 | baoyu-compress-image | — |
-| 评论回复 | xiaohongshu-mcp / xiaohongshu-mcp-skills；reply-assistant 按需 | — |
+| 序号 | 能力 | 首选（按 ClawHub 评分） | 备选/不重复装 |
+|------|------|-------------------------|----------------|
+| 1 | 链接→Markdown/报告格式 | baoyu-url-to-markdown, baoyu-format-markdown | — |
+| 2 | 小红书配图/封面 | baoyu-xhs-images, baoyu-cover-image, baoyu-article-illustrator | — |
+| 3 | 发布到小红书 | xiaohongshu-mcp (3.633) | xiaohongshu-mcp-skill、xiaohongshu-mcp-skills、assistant-operator 选一 |
+| 4 | 搜索/趋势/分析 | xiaohongshu-mcp, xiaohongshu-cn (3.584) | xiaohongshu-deep-research, xiaohongshu-search-summarizer |
+| 5 | 深度调研/拆解 | xiaohongshu-deep-research (3.568), xiaohongshu-search-summarizer (3.275) | — |
+| 6 | 内容/写作策略 | xiaohongshu-content (3.349), xiaohongshu-founder-growth-writer (3.338) | — |
+| 7 | 图片压缩 | baoyu-compress-image | — |
+| 8 | 评论回复 | xiaohongshu-mcp / xiaohongshu-mcp-skills；reply-assistant 按需 | — |
 
 **补充能力（完整栈）** — 在七件套基础上扩展，覆盖选题→筛选→拆解→创作→发布→数据→评论全链路：
 
-| 补充能力 | 用途 | 推荐技能 | 来源 |
-|----------|------|----------|------|
-| 标题筛选 / 标题质量 | 按爆款标题范式筛选笔记，监控/拆解前预筛 | xiaohongshu-content、xiaohongshu-algorithm-optimizer | ClawHub |
-| 标题与首图优化 | 优化标题、首图、标签，提高曝光与互动 | xiaohongshu-algorithm-optimizer、xhs-writing-coach | ClawHub |
-| 爆款/视频筛选 | 按细分领域筛新鲜/爆款视频，带 xsec_token URL | xhs-video-finder | ClawHub |
-| 写作与互动辅导 | 标题/正文/标签/封面/评论引导、互动提升 | xhs-writing-coach | ClawHub |
-| 审核与复盘 | 选题→草稿→飞书审核→发布→复盘 | openclaw-xiaohongshu-ops、clawnote | ClawHub |
-| 视频下载与分析 | 下载视频、提取语音/总结，供拆解与数据 | xhs-video-downloader、xhs-video-analyzer | ClawHub |
-| 评论破冰与回复 | 破冰句、评论情感与回复建议 | xiaohongshu-first-line、xiaohongshu-reply-assistant | ClawHub |
-| 多语言 | 多语言与翻译 | baoyu-translate | skills.sh |
-| 信息图/漫画风 | 丰富二创形式 | baoyu-infographic、baoyu-comic | skills.sh |
+| 序号 | 补充能力 | 用途 | 推荐技能 | 来源 |
+|------|----------|------|----------|------|
+| 1 | 标题筛选 / 标题质量 | 按爆款标题范式筛选笔记，监控/拆解前预筛 | xiaohongshu-content、xiaohongshu-algorithm-optimizer | ClawHub |
+| 2 | 标题与首图优化 | 优化标题、首图、标签，提高曝光与互动 | xiaohongshu-algorithm-optimizer、xhs-writing-coach | ClawHub |
+| 3 | 爆款/视频筛选 | 按细分领域筛新鲜/爆款视频，带 xsec_token URL | xhs-video-finder | ClawHub |
+| 4 | 写作与互动辅导 | 标题/正文/标签/封面/评论引导、互动提升 | xhs-writing-coach | ClawHub |
+| 5 | 审核与复盘 | 选题→草稿→飞书审核→发布→复盘 | openclaw-xiaohongshu-ops、clawnote | ClawHub |
+| 6 | 视频下载与分析 | 下载视频、提取语音/总结，供拆解与数据 | xhs-video-downloader、xhs-video-analyzer | ClawHub |
+| 7 | 评论破冰与回复 | 破冰句、评论情感与回复建议 | xiaohongshu-first-line、xiaohongshu-reply-assistant | ClawHub |
+| 8 | 多语言 | 多语言与翻译 | baoyu-translate | skills.sh |
+| 9 | 信息图/漫画风 | 丰富二创形式 | baoyu-infographic、baoyu-comic | skills.sh |
 
 更细的映射与同质取舍见 [SKILLS-EVALUATION.md § 七、完整技能栈](./SKILLS-EVALUATION.md#七完整技能栈七件套--补充能力)。
 

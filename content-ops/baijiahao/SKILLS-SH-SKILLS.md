@@ -35,14 +35,18 @@ Baoyu 系列：**安装** `npx skills add jimliu/baoyu-skills --skill <技能名
 - **命令**：`npx skills remove <技能名>`（技能名与安装后目录名一致）
 - 或手动删除：项目安装为 `./.skills/<技能名>`，全局安装为 `~/.skills/<技能名>`。
 
-## 与百家号四件套的对应建议
+## 与七件套对应建议
 
-| baijiahao Agent | 可选的 skills.sh 技能 |
-|-----------------|------------------------|
-| 1-baijiahao-viral-breakdown | baoyu-url-to-markdown、baoyu-format-markdown |
-| 2-baijiahao-rewrite | baoyu-cover-image、baoyu-article-illustrator |
-| 3-baijiahao-publisher | baoyu-compress-image（发布流程需自建或开放平台） |
-| 4-baijiahao-data-assistant | baoyu-format-markdown |
+| 序号 | 渠道 Agent | 可选的 skills.sh 技能（ClawHub 未覆盖时） |
+|------|------------|------------------------------------------|
+| 1 | baijiahao-hot-monitor | baoyu-url-to-markdown, baoyu-format-markdown |
+| 2 | baijiahao-viral-breakdown | baoyu-url-to-markdown, baoyu-format-markdown |
+| 3 | baijiahao-rewrite / baijiahao-write | baoyu-cover-image, baoyu-article-illustrator；可选 baoyu-infographic, baoyu-comic |
+| 4 | baijiahao-publisher | baoyu-compress-image（发布需浏览器/开放平台） |
+| 5 | baijiahao-data-assistant | baoyu-format-markdown |
+| 6 | baijiahao-comment-manager | 按需 ClawHub/skills.sh |
+
+**全部安装/全部卸载**以 [SKILLS-EVALUATION.md §6.3](./SKILLS-EVALUATION.md) 或 README「七件套全部可使用的技能」为准。
 
 ---
 

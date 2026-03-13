@@ -2,11 +2,22 @@
 
 > 来源：[ClawHub — 按 toutiao 搜索](https://clawhub.ai/skills?sort=downloads&q=toutiao)。安装方式：`clawhub install <slug>`。若当前无或较少，以本目录 README 下方技能表与 baoyu 系列为主；安装：`npx skills add <owner/repo> --skill <名>`。发布需头条开放平台或浏览器自动化。
 
-## 技能总表（按下载量排序）
+## 技能总表（按下载量排序，待补充）
 
-| # | Slug | 名称/功能摘要 | 备注 |
-|---|------|----------------|------|
-| （待补充） | — | 请在 ClawHub 查看 toutiao 相关技能 | 头条号管线可优先用 skills.sh + baoyu |
+| 序号 | Slug | 名称/功能摘要 | 七件套适用环节 | 备注 |
+|------|------|----------------|----------------|------|
+| （待补充） | — | 请在 [ClawHub toutiao](https://clawhub.ai/skills?sort=downloads&q=toutiao) 查看最新 | — | 头条号管线当前以 skills.sh Baoyu 为主 |
+
+## 与七件套的对应建议
+
+- **热门监控 / 爆款拆解 / 数据助手**：以 skills.sh（baoyu-url-to-markdown, baoyu-format-markdown）为主；ClawHub 若有 toutiao 相关 slug 可选用。
+- **二创 / 写作**：以 skills.sh Baoyu 配图为主（baoyu-cover-image, baoyu-article-illustrator）。
+- **发布**：头条号需开放平台或浏览器；压缩用 baoyu-compress-image。
+- **评论管理**：按需 ClawHub/skills.sh。
+
+## 推荐安装清单
+
+本渠道**能用上的全要**时，以 [SKILLS-EVALUATION.md §7.3](./SKILLS-EVALUATION.md) 及 [README 全部安装/全部卸载](./README.md) 为准；ClawHub 部分待补充，其余能力由 skills.sh（Baoyu 等）补充。
 
 ## 安装、更新与卸载
 

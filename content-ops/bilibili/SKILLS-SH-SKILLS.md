@@ -91,14 +91,19 @@ npx skills add jimliu/baoyu-skills --skill baoyu-translate -y -g;
 - **命令**：`npx skills remove <技能名>`（技能名与安装后目录名一致）
 - 或手动删除：项目安装为 `./.skills/<技能名>`，全局安装为 `~/.skills/<技能名>`。
 
-## 与 B站四件套的对应建议（skills.sh）
+## 与七件套对应建议（skills.sh）
 
-| bilibili Agent | 可选的 skills.sh 技能（ClawHub 未覆盖时） | Baoyu 可选 |
-|----------------|--------------------------------------------|------------|
-| 1-bilibili-hot-monitor | bilibili-analyzer、bilibili-watcher（openakita） | baoyu-url-to-markdown、baoyu-format-markdown、baoyu-danger-x-to-markdown |
-| 2-bilibili-content-helper | bilibili-subtitle、bilibili-subtitle-downloader、bilibili-chapter-generator | baoyu-cover-image、baoyu-article-illustrator、baoyu-slide-deck、baoyu-infographic、baoyu-comic、baoyu-image-gen、baoyu-markdown-to-html、baoyu-translate |
-| 3-bilibili-video-publisher | bilibili-downloader（下载后本地处理）、bilibili-toolkit（若含投稿） | baoyu-compress-image、baoyu-post-to-x |
-| 4-bilibili-data-assistant | bilibili-analyzer | baoyu-format-markdown、baoyu-translate |
+| 序号 | 渠道 Agent | 可选的 skills.sh 技能（ClawHub 未覆盖时） |
+|------|------------|------------------------------------------|
+| 1 | bilibili-hot-monitor | bilibili-hot-monitor、bilibili-update-viewer（ClawHub）；Baoyu：baoyu-format-markdown |
+| 2 | bilibili-content-helper | bilibili-helper、bilibili-subtitle-download-skill（ClawHub）；Baoyu：baoyu-cover-image、baoyu-article-illustrator |
+| 3 | bilibili-video-publisher | bilibili-video-publish、bilibili-upload（ClawHub）；Baoyu：baoyu-compress-image |
+| 4 | bilibili-data-assistant | bilibili-analytics（ClawHub）；Baoyu：baoyu-format-markdown |
+| 5 | bilibili-viral-breakdown | Baoyu：baoyu-format-markdown |
+| 6 | bilibili-write | Baoyu：baoyu-cover-image、baoyu-article-illustrator；可选 baoyu-translate、baoyu-infographic、baoyu-comic |
+| 7 | bilibili-comment-manager | 按需 ClawHub/skills.sh |
+
+**全部安装/全部卸载**以 [SKILLS-EVALUATION.md §6.3](./SKILLS-EVALUATION.md) 或 README「七件套全部可使用的技能」为准。
 
 ---
 

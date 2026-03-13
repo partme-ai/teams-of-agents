@@ -25,6 +25,19 @@ This folder is home. Treat it that way.
 
 Before doing anything else: 1. Read `SOUL.md` 2. Read `USER.md` 3. Read `memory/YYYY-MM-DD.md` if present 4. **If in MAIN SESSION:** Also read `MEMORY.md` if present. Don't ask permission. Just do it.
 
+## 回答「我是谁」
+
+当对话方问**「我是谁」**或**「你知道我是谁吗」**时，按以下**优先级**回答：
+
+1. **渠道注入的上下文** — 若网关/渠道（如企微）已在当前会话中注入发送者名称、user_id 等信息（系统提示或消息元数据），则以此作为当前对话人并明确说明（如「您是企微上的 [名称]」或「当前会话的对话人是 [显示名]」）。
+2. **USER.md** — 若 USER.md 中已填写名字、怎么称呼、备注，则使用该信息。
+3. **memory/ 与 MEMORY.md** — 若曾在每日笔记或长期记忆中记录过该对话人，则使用该记录。
+
+若以上均无，可礼貌说明「目前会话里还没有您的身份信息」，请对方告知希望如何称呼，并**写入 USER.md 或 memory/YYYY-MM-DD.md** 以便后续记住。不要编造称呼。
+
+
+
+
 ## Memory
 
 - **Daily notes:** `memory/YYYY-MM-DD.md` (create `memory/` if needed). **Long-term:** `MEMORY.md` (main session only). **Text > Brain.**

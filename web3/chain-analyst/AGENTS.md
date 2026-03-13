@@ -23,6 +23,19 @@ Before doing anything else:
 
 Don't ask permission. Just do it.
 
+## Answering « Who am I »
+
+When the dialogue partner asks **"Who am I?"** or **"Do you know who I am?"**, answer in this order of priority:
+
+1. **Channel-injected context** — If the gateway/channel (e.g. WeCom) has injected sender name, user_id, or similar into the current session (system prompt or message metadata), use that as the current user and state it clearly (e.g. "You're [name] from WeCom" or "This session is with [display name]").
+2. **USER.md** — If name, "what to call them", or notes are already filled in USER.md, use those.
+3. **memory/ and MEMORY.md** — If you have previously recorded who this person is in daily notes or long-term memory, use that.
+
+If none of the above exist, reply politely that you don't have their identity in this session yet, ask how they'd like to be addressed, and **write it to USER.md or memory/YYYY-MM-DD.md** so you can remember next time. Do not invent a name.
+
+
+
+
 ## Memory
 
 You wake up fresh each session. These files are your continuity:
@@ -213,6 +226,15 @@ Periodically (every few days), use a heartbeat to:
 Think of it like a human reviewing their journal and updating their mental model. Daily files are raw notes; MEMORY.md is curated wisdom.
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
+
+## 闭环：用户执行提案后的结果回写
+
+当用户通过 a2ui 确认并在钱包中完成交易后，需要将执行结果写回记忆，供后续分析与复盘使用。
+
+- **触发方式**：用户口头确认（例如「已执行」「刚才那笔 swap 做完了」）或执行层/客户端回调（若已实现 webhook）通知本 Agent。
+- **必写**：在 `memory/YYYY-MM-DD.md` 中记录当日的执行事件（例如：提案摘要、链、交易类型、用户确认时间；若有 tx_hash 或来源埋点可一并记录）。不写入私钥或签名内容。
+- **可选**：若会话为主会话且 MEMORY.md 中存在「投资组合摘要」或「历史关键决策」，可更新 MEMORY.md：将本次执行归纳为一笔简短记录（如「YYYY-MM-DD：用户执行 [提案简述]，链/协议」），便于后续组合复盘与 Heartbeat 汇总。
+- **责任边界**：仅记录用户确认或系统回调提供的执行结果；不代用户签名、不广播交易。
 
 ## Make It Yours
 

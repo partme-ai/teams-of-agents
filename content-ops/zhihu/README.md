@@ -2,23 +2,34 @@
 
 > 基于 [ANALYSIS-渠道与流程对齐 OctoFlow](../../ANALYSIS-渠道与流程对齐OctoFlow.md) 建议，为**知乎**提供与 wechat-article / xiaohongshu 同构的内容管线七件套：热门监控、爆款拆解、二创、写作、自动发布、数据助手、评论管理。读（抓取）采用通用 Playwright/Firecrawl，写（发布）采用 social-push 想法发布或浏览器自动化。
 
-## 技能来源区分
+## 技能选型
 
-| 来源 | 搜索链接 | 技能一览文档 | 安装命令 |
-|------|----------|--------------|----------|
-| **ClawHub（为主）** | [clawhub.ai/skills?q=zhihu](https://clawhub.ai/skills?sort=downloads&q=zhihu) | [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) | `clawhub install <slug>` |
-| **skills.sh（取最优）** | [skills.sh/?q=zhihu](https://skills.sh/?q=zhihu)、[skills.sh/?q=baoyu](https://skills.sh/?q=baoyu) | [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md) | `npx skills add <owner/repo> --skill <名>` |
+| 序号 | 来源 | 搜索链接 | 技能一览文档 | 安装命令 |
+|------|------|----------|--------------|----------|
+| 1 | **ClawHub（为主）** | [clawhub.ai/skills?q=zhihu](https://clawhub.ai/skills?sort=downloads&q=zhihu) | [CLAWHUB-SKILLS.md](./CLAWHUB-SKILLS.md) | `clawhub install <slug>` |
+| 2 | **skills.sh（取最优）** | [skills.sh/?q=zhihu](https://skills.sh/?q=zhihu)、[skills.sh/?q=baoyu](https://skills.sh/?q=baoyu) | [SKILLS-SH-SKILLS.md](./SKILLS-SH-SKILLS.md) | `npx skills add <owner/repo> --skill <名>` |
 
 ## 技能评估结论（摘录）
 
 > 完整评估见 [SKILLS-EVALUATION.md](./SKILLS-EVALUATION.md)。原则：**ClawHub 为主、skills.sh 取最优；同能力只保留一个最优技能。** 知乎 ClawHub 技能待补充，当前以 Baoyu 为主。
 
-| 能力 | 首选 | 备选/不重复装 |
-|------|------|----------------|
-| 链接→Markdown/报告格式 | baoyu-url-to-markdown, baoyu-format-markdown | — |
-| 封面/长文配图 | baoyu-cover-image, baoyu-article-illustrator | — |
-| 发布到知乎 | social-push | 按需选一 |
-| 图片压缩 | baoyu-compress-image | — |
+| 序号 | 能力 | 首选 | 备选/不重复装 |
+|------|------|------|----------------|
+| 1 | 链接→Markdown/报告格式 | baoyu-url-to-markdown, baoyu-format-markdown | — |
+| 2 | 封面/长文配图 | baoyu-cover-image, baoyu-article-illustrator | — |
+| 3 | 发布到知乎 | social-push | 按需选一 |
+| 4 | 图片压缩 | baoyu-compress-image | — |
+
+## 补充能力（完整栈）
+
+七件套之外本管线可用上的补充能力（与 [SKILLS-EVALUATION.md §6.1](./SKILLS-EVALUATION.md) 一致）：
+
+| 序号 | 补充能力 | 用途 | 推荐技能 | 来源 |
+|------|----------|------|----------|------|
+| 1 | 发布到知乎 | 知乎想法/多平台发布 | social-push | skills.sh / ClawHub |
+| 2 | 评论回复/采集 | 回复草稿、评论拉取 | 按需 ClawHub/skills.sh | — |
+| 3 | 多语言与翻译 | 多语言内容、翻译 | baoyu-translate | skills.sh |
+| 4 | 信息图/漫画风配图 | 丰富二创形式 | baoyu-infographic、baoyu-comic | skills.sh |
 
 ## 必须保证的七个环节
 
@@ -76,28 +87,50 @@
 | 5 | zhihu-data-assistant   | baoyu-format-markdown | skills.sh | 报告格式 |
 | 6 | zhihu-comment-manager  | （按需选评论采集与回复技能） | ClawHub/skills.sh | 评论拉取、回复草稿 |
 
-### 安装命令（按来源与链路顺序）
+### 安装前置与唯一命令来源
 
-安装后目录名需与 config 中 `skills` 一致。**勿在 TOOLS.md 存凭证。**
-
-**第一步：安装 SkillHub CLI**
+**第一步：安装 SkillHub CLI**（仅首次需要）
 
 ```bash
 curl -fsSL https://skillhub-1251783334.cos.ap-guangzhou.myqcloud.com/install/install.sh | bash
 ```
 
-**第二步：安装技能**
+**全部技能安装/卸载以本页下方「七件套全部可使用的技能」或 [SKILLS-EVALUATION.md §6.3](./SKILLS-EVALUATION.md) 为准。** 安装后目录名需与 config 中 `skills` 一致。勿在 TOOLS.md 存凭证。
 
-**ClawHub** — `clawhub search zhihu` 后按需 `clawhub install <slug>`（当前知乎技能待补充）。
+### 七件套全部可使用的技能：全部安装 / 全部卸载命令
 
-**skills.sh（Baoyu）**
+与 [SKILLS-EVALUATION.md §6.3](./SKILLS-EVALUATION.md) 一致；能用上的全列（同质取一，可并存全列）。
+
+**全部安装命令**
 
 ```bash
-npx skills add jimliu/baoyu-skills --skill baoyu-url-to-markdown -y -g;
-npx skills add jimliu/baoyu-skills --skill baoyu-format-markdown -y -g;
-npx skills add jimliu/baoyu-skills --skill baoyu-cover-image -y -g;
-npx skills add jimliu/baoyu-skills --skill baoyu-article-illustrator -y -g;
-npx skills add jimliu/baoyu-skills --skill baoyu-compress-image -y -g;
+# ClawHub — 知乎技能待补充，clawhub search zhihu 后按需 install
+
+# skills.sh — 抓取、格式、配图、压缩、补充
+npx skills add jimliu/baoyu-skills --skill baoyu-url-to-markdown -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-format-markdown -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-cover-image -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-article-illustrator -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-compress-image -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-translate -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-infographic -y -g
+npx skills add jimliu/baoyu-skills --skill baoyu-comic -y -g
+```
+
+**全部卸载命令**
+
+```bash
+# ClawHub — 若有安装，按 slug 逐条 uninstall
+
+# skills.sh
+npx skills remove baoyu-url-to-markdown
+npx skills remove baoyu-format-markdown
+npx skills remove baoyu-cover-image
+npx skills remove baoyu-article-illustrator
+npx skills remove baoyu-compress-image
+npx skills remove baoyu-translate
+npx skills remove baoyu-infographic
+npx skills remove baoyu-comic
 ```
 
 ## 配置说明
