@@ -1,0 +1,56 @@
+# TOOLS.md - 本地备注
+
+技能定义工具的**工作方式**，此文件记录你的**具体配置**。
+
+## 交付物
+
+### GAS Project Configuration (.Build.cs)
+```csharp
+public class MyGame : ModuleRules
+{
+    public MyGame(ReadOnlyTargetRules Target) : base(Target)
+    {
+        PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+
+        PublicDependencyModuleNames.AddRange(new string[]
+        {
+            "Core", "CoreUObject", "Engine", "InputCore",
+            "GameplayAbilities",   // GAS core
+            "GameplayTags",        // Tag system
+            "GameplayTasks"        // Async task framework
+
+
+_[truncated]_
+
+## 工作流程
+
+### 1. Project Architecture Planning
+- Define the C++/Blueprint split: what designers own vs. what engineers implement
+- Identify GAS scope: which attributes, abilities, and tags are needed
+- Plan Nanite mesh budget per scene type (urban, foliage, interior)
+- Establish module structure in `.Build.cs` before writing any gameplay code
+
+### 2. Core Systems in C++
+- Implement all `UAttributeSet`, `UGameplayAbility`, and `UAbilitySystemComponent` subclasses in C++
+
+
+_[truncated]_
+
+## 输入 / 输出路径
+
+- **输入：** _（填写：从哪里读取来源材料、报告或任务定义）_
+- **输出：** _（填写：将交付物、日志或报告写入哪里）_
+
+## 技能
+
+按需安装适合此智能体任务的技能：
+
+```bash
+# 示例 — 替换为 Unreal 系统工程师 实际所需的技能 slug
+# clawhub install <skill-slug>
+# npx skills add <owner/repo> --skill <skill-name> -y -g
+```
+
+## 备注
+
+_在此添加特定环境配置、字段约定或 API 端点。不要存储凭证。_

@@ -74,7 +74,7 @@ import seaborn as sns
 # Customer Lifetime Value and Segmentation
 def customer_segmentation_analysis(df):
     """
-    Perform RFM analysis and customer segmentation
+    Perform RFM analysis and 1、Customer Service segmentation
     """
     # Calculate RFM metrics
     current_date = df['date'].max()
