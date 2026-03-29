@@ -27,8 +27,8 @@
 | 6 | ux-designer | UED 设计师 | 6-ux-designer | 用户研究、信息架构、交互原型、可用性测试 |
 | 7 | ui-designer | UI 设计师 | 7-ui-designer | 视觉与设计系统、高保真交付、设计评审 |
 | 8 | backend-engineer | 后端工程师 | 8-backend-engineer | API、服务、数据库设计、消息/缓存、测试 |
-| 9 | database-engineer | 数据库工程师 | 9-database-engineer | 模型、性能、安全、备份与灾备、合规 |
-| 10 | frontend-engineer | 前端工程师 | 10-frontend-engineer | 组件、构建、性能、可访问性、技术调研 |
+| 9 | database-engineer | 数据库工程师 | 9-database-engineer | 模型、**查询/执行计划优化**、性能、安全、备份与灾备、合规（原 database-optimizer 已并入） |
+| 10 | frontend-engineer | 前端工程师 | 10-frontend-engineer | 组件、构建、性能、可访问性、技术调研；**编辑器集成 / 跨端通信 / PWA**（原 `frontend-developer` 已并入） |
 | 11 | mobile-engineer | 移动开发工程师 | 11-mobile-engineer | 原生/跨端、性能、测试、应用商店 |
 | 12 | qa-engineer | 测试工程师 | 12-qa-engineer | 测试策略、用例、自动化、性能测试、缺陷管理 |
 | 13 | ops-engineer | 运维工程师 | 13-ops-engineer | CI/CD、发布、监控、日志、故障、容量、IaC |

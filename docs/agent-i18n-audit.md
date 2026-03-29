@@ -76,7 +76,7 @@
 | 2、Digital Workforce/8、Research & Strategy/6-supply-chain-strategist |      537:      92 |
 | 2、Digital Workforce/8、Research & Strategy/7-china-e-commerce-operator |      249:      92 |
 | 2、Digital Workforce/8、Research & Strategy/8-cross-border-e-commerce-specialist |      209:      92 |
-| 2、Digital Workforce/software-delivery/15-frontend-developer |      190:      29 |
+| 2、Digital Workforce/software-delivery/15-frontend-developer | — 已并入 10-frontend-engineer |
 | 2、Digital Workforce/software-delivery/16-backend-architect |      201:      30 |
 | 2、Digital Workforce/software-delivery/18-api-tester |      269:      49 |
 | 2、Digital Workforce/software-delivery/20-security-engineer |      242:      92 |
@@ -274,11 +274,11 @@
 | 2、Digital Workforce/software-delivery/12-qa-engineer |      129:     117 |       69:      10 |        5:       6 |       85:      19 |       51:      51 |       20:       3 |       22:      21 | - |
 | 2、Digital Workforce/software-delivery/13-ops-engineer |      126:     148 |       69:      10 |        5:       6 |       85:      19 |       51:      51 |       20:       3 |       22:      21 | - |
 | 2、Digital Workforce/software-delivery/14-data-analyst |      134:     124 |       69:      10 |        5:       6 |       85:      19 |       51:      51 |       20:       3 |       22:      21 | - |
-| 2、Digital Workforce/software-delivery/15-frontend-developer |      190:      29 |       18:      16 |        3:       3 |        2:       3 |       28:      27 |       17:      17 |        7:       7 |  AGENTS短 |
+| 2、Digital Workforce/software-delivery/15-frontend-developer | — | — | — | — | — | — | — | **已并入** `10-frontend-engineer`；独立目录已移除；下列为历史快照 |
 | 2、Digital Workforce/software-delivery/16-backend-architect |      201:      30 |       18:      18 |       14:      14 |        2:       2 |       28:      26 |       21:      21 |       18:      18 |  AGENTS短 |
 | 2、Digital Workforce/software-delivery/17-code-reviewer |       50:      29 |       18:      16 |        3:       3 |        2:       3 |       21:      22 |       17:      17 |        7:       7 | - |
 | 2、Digital Workforce/software-delivery/18-api-tester |      269:      49 |       18:      18 |        3:       3 |        2:       2 |       30:      28 |       17:      17 |        7:       7 |  AGENTS短 |
-| 2、Digital Workforce/software-delivery/19-database-optimizer |      142:      92 |       69:      69 |        3:       3 |        2:       3 |       29:      36 |       18:      18 |        8:      20 | - |
+| 2、Digital Workforce/software-delivery/19-database-optimizer | — | — | — | — | — | — | — | **已并入** `9-database-engineer`（能力合并，独立目录已移除）；下列行数为历史快照，勿再跑数 |
 | 2、Digital Workforce/software-delivery/2-project-manager |      125:     126 |       69:       9 |        5:       5 |       85:      19 |       51:      53 |       40:       3 |       22:      21 | - |
 | 2、Digital Workforce/software-delivery/20-security-engineer |      242:      92 |       69:      69 |        3:       3 |        2:       3 |       29:      36 |       18:      18 |        8:      20 |  AGENTS短 |
 | 2、Digital Workforce/software-delivery/21-devops-automator |      340:      92 |       69:      69 |        3:       3 |        2:       3 |       28:      36 |       18:      18 |        8:      20 |  AGENTS短 |
