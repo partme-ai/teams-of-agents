@@ -2,11 +2,7 @@
 
 This repository is a workspace library for the `OctoClaw / OpenClaw` ecosystem. It provides reusable agent definitions, domain orchestration layouts, channel operation pipelines, and skill selection documents.
 
-The project is no longer organized as the old flat root layout with folders like `it/`, `web3/`, and `education/` directly under the repo root. It has evolved into three primary groups:
-
-- `1、IM Channels`: agents for Telegram, Discord, Feishu, and other messaging/channel scenarios
-- `2、Digital Workforce`: business-facing digital workers, expert roles, and orchestrated teams
-- `3、Content Ops`: content production and publishing pipelines for major platforms
+The top-level layout now aligns with the [agency-agents](https://github.com/msitarzewski/agency-agents) taxonomy (for example `engineering/`, `marketing/`, `specialized/`). Standard roster agents live under the matching category. PartMe-specific agents and legacy channel docs live under `specialized/partme/` (including former IM channel notes, per-platform Content Ops READMEs, and software-delivery remnants).
 
 > `OctoClaw` focuses on zero-trust execution, streaming responses, talk-while-executing, and enterprise-grade safety. The agent definitions and skill docs in this repo can be used directly as business workspaces for OctoClaw, while remaining compatible with OpenClaw-style workspace organization.  
 > References: `../octoclaw/README.md`, `../octoclaw/README_CN.md`
@@ -18,7 +14,7 @@ The project is no longer organized as the old flat root layout with folders like
 1. [Repository Overview](#1-repository-overview)
 2. [Recommended Installation](#2-recommended-installation)
 3. [Quick Start for an Agent Group](#3-quick-start-for-an-agent-group)
-4. [Three Major Groups and Representative Agents](#4-three-major-groups-and-representative-agents)
+4. [Taxonomy and Representative Agents](#4-taxonomy-and-representative-agents)
 5. [Skills System and Installation Strategy](#5-skills-system-and-installation-strategy)
 6. [Agent Documentation Standard](#6-agent-documentation-standard)
 7. [Configuration and Deployment Guidance](#7-configuration-and-deployment-guidance)
@@ -33,28 +29,34 @@ The project is no longer organized as the old flat root layout with folders like
 
 ```text
 claw-agents/
-├── 1、IM Channels/
-├── 2、Digital Workforce/
-├── 3、Content Ops/
+├── academic/
+├── design/
+├── engineering/
+├── game-development/
+├── marketing/
+├── paid-media/
+├── product/
+├── project-management/
+├── sales/
+├── spatial-computing/
+├── specialized/
+│   └── partme/
+├── strategy/
+├── support/
+├── testing/
 ├── config/
 ├── docs/
 └── scripts/
 ```
 
-### What each group is for
+### Layout
 
-| Group | Purpose | Typical output |
-|------|---------|----------------|
-| `1、IM Channels` | Build message entrypoints, moderation, community ops, and support agents | Telegram/Discord/Feishu agent sets |
-| `2、Digital Workforce` | Build internal and external digital workers plus expert networks | software delivery teams, Web3 research teams, customer support, education, sales |
-| `3、Content Ops` | Build content-operations pipelines | hot-topic monitoring, viral breakdown, writing/rewriting, publishing, analytics, comment management |
+| Layer | Description |
+|-------|-------------|
+| Agency-aligned categories | Same names as `research/agency-agents`; agent folders use kebab-case slugs. `AGENTS.md` / `IDENTITY.md` / `SOUL.md` from the OpenClaw export are merged into these folders where applicable. |
+| `specialized/partme/` | Non-roster or legacy assets (`im-channels/`, `content-ops/`, `digital-workforce-legacy/`, etc.). Duplicate roster paths are kept under `specialized/partme/roster-collision/` for traceability. |
 
-### What changed versus the old docs
-
-- The repo root is no longer flat with `it/`, `web3/`, `education/`, and similar folders.
-- `Software & Delivery`, `Web3`, `Education`, and similar domains now live under `2、Digital Workforce`.
-- Many content platforms now follow a stable structure of `README + skill indexes + evaluation files`.
-- `IM Channels` already contains multiple real channel trees; the old root docs no longer reflect that reality.
+Bulk migration is implemented in `scripts/migrate_to_agency_layout.py` (supports `--dry-run`). Historical docs may still mention old paths; trust the current tree.
 
 ---
 
@@ -134,9 +136,9 @@ See `docs/SKILLS-MASTER.md` for the full explanation.
 ### Option 1: reuse repo folders as workspace templates
 
 1. Pick a directory, for example:
-   - `2、Digital Workforce/9、Software & Delivery`
-   - `2、Digital Workforce/10、Web3`
-   - `3、Content Ops/xiaohongshu`
+   - `specialized/partme/software-delivery/`
+   - `specialized/partme/web3/`
+   - `specialized/partme/content-ops/xiaohongshu/`
 2. Copy or symlink the target role directory into the runtime workspace
 3. Register `agentId`, `workspace`, and `agentDir` in runtime config
 4. Enable bindings and agent-to-agent delegation as needed
@@ -154,7 +156,7 @@ mkdir -p ~/.openclaw/agents/technical-director/sessions
 Then copy the role definition:
 
 ```bash
-cp -R "/path/to/claw-agents/2、Digital Workforce/9、Software & Delivery/1-technical-director/"* \
+cp -R "/path/to/claw-agents/specialized/partme/software-delivery/1-technical-director/"* \
   ~/.openclaw/workspace-technical-director/
 ```
 
@@ -192,122 +194,20 @@ If you use OctoClaw, apply the same principles using its own CLI and config mode
 
 ---
 
-## 4. Three Major Groups and Representative Agents
+## 4. Taxonomy and Representative Agents
 
-### 4.1 IM Channels
+### 4.1 Agency-aligned examples
 
-Directory: `1、IM Channels`
+- Engineering & delivery: `engineering/frontend-developer`, `engineering/backend-architect`, `engineering/code-reviewer`
+- Growth & content: `marketing/douyin-strategist`, `marketing/xiaohongshu-specialist`, `marketing/zhihu-strategist`
+- Games: `game-development/unity-architect`, `game-development/godot-gameplay-scripter`
+- Sales & ads: `sales/outbound-strategist`, `paid-media/ppc-campaign-strategist`
 
-Currently visible major channels:
+### 4.2 PartMe extensions (`specialized/partme/`)
 
-- `telegram`
-- `discord`
-- `feishu`
-
-Representative directories:
-
-- `1、IM Channels/telegram/1-telegram-bot-developer`
-- `1、IM Channels/telegram/2-telegram-community`
-- `1、IM Channels/telegram/3-telegram-support`
-- `1、IM Channels/discord/1-discord-mod`
-- `1、IM Channels/discord/2-discord-community`
-- `1、IM Channels/discord/3-discord-support`
-
-Typical use cases:
-
-- community management
-- moderation and guardrails
-- user support
-- bot development and automated channel operations
-
-### 4.2 Digital Workforce
-
-Directory: `2、Digital Workforce`
-
-It now contains multiple business capability domains, including:
-
-- `1、Company Manger`
-- `2、Sales`
-- `3、Finance & Ops`
-- `4、Game & Media`
-- `5、XR & Spatial`
-- `6、Compliance & Risk`
-- `7、Ad & Creative`
-- `8、Research & Strategy`
-- `9、Software & Delivery`
-- `10、Web3`
-- `11、Customer Service`
-- `12、Education`
-
-Two especially representative domains:
-
-**Software & Delivery**
-
-- `1-technical-director`
-- `2-project-manager`
-- `3-product-manager`
-- `10-frontend-engineer`
-- `13-ops-engineer`
-- `backend-architect`
-- `code-reviewer`
-
-This shows the repo has expanded from a fixed “13-role team” into:
-
-- a core delivery team
-- additional specialist experts
-- a composable delegation network
-
-**Web3**
-
-- `0-main`
-- `chain-analyst`
-- `defi-scout`
-
-Good for research, monitoring, portfolio analysis, and specialized scouting workflows.
-
-### 4.3 Content Ops
-
-Directory: `3、Content Ops`
-
-The repo now includes a broader platform set, including at least:
-
-- `baidu`
-- `baijiahao`
-- `bilibili`
-- `douyin`
-- `growth`
-- `instagram`
-- `juejin`
-- `kuaishou`
-- `linkedin`
-- `podcast`
-- `reddit`
-- `tiktok`
-- `toutiao`
-- `twitter`
-- `wechat-article`
-- `wechat-video`
-- `weibo`
-- `xiaohongshu`
-- `zhihu`
-
-Most content platforms follow a “seven-piece pipeline” or a close variation:
-
-- hot-topic monitoring
-- viral post breakdown
-- rewrite
-- original writing
-- publishing
-- analytics assistant
-- comment management
-
-Representative directories:
-
-- `3、Content Ops/douyin/1-douyin-specialist`
-- `3、Content Ops/douyin/2-douyin-hot-monitor`
-- `3、Content Ops/douyin/5-douyin-publisher`
-- `3、Content Ops/douyin/douyin-strategist`
-- `3、Content Ops/linkedin/linkedin-content-creator`
+- IM scenarios: `specialized/partme/im-channels/discord/`, `telegram/`, etc.
+- Channel ops docs: `specialized/partme/content-ops/douyin/`, `xiaohongshu/`, etc.
+- Delivery & Web3 remnants: `specialized/partme/software-delivery/`, `specialized/partme/web3/`; full legacy tree under `specialized/partme/digital-workforce-legacy/`
 
 ---
 
@@ -321,9 +221,9 @@ Representative directories:
 
 **Group-level READMEs**
 
-- `1、IM Channels/README.md`
-- `2、Digital Workforce/README.md`
-- `3、Content Ops/README.md`
+- `specialized/partme/im-channels/README.md`
+- `specialized/partme/digital-workforce-legacy/README.md`
+- `specialized/partme/content-ops/README.md`
 
 **Channel/domain-level skill docs**
 
@@ -336,16 +236,16 @@ Most mature domains now include:
 
 For example:
 
-- `3、Content Ops/xiaohongshu/README.md`
-- `3、Content Ops/xiaohongshu/CLAWHUB-SKILLS.md`
-- `3、Content Ops/xiaohongshu/SKILLS-SH-SKILLS.md`
-- `3、Content Ops/xiaohongshu/SKILLS-EVALUATION.md`
+- `specialized/partme/content-ops/xiaohongshu/README.md`
+- `specialized/partme/content-ops/xiaohongshu/CLAWHUB-SKILLS.md`
+- `specialized/partme/content-ops/xiaohongshu/SKILLS-SH-SKILLS.md`
+- `specialized/partme/content-ops/xiaohongshu/SKILLS-EVALUATION.md`
 
 Software delivery has its own domain-specific variant:
 
-- `2、Digital Workforce/9、Software & Delivery/README.md`
-- `2、Digital Workforce/9、Software & Delivery/IT-SKILLS.md`
-- `2、Digital Workforce/9、Software & Delivery/SKILLS-EVALUATION-IT.md`
+- `specialized/partme/software-delivery/README.md`
+- `specialized/partme/software-delivery/IT-SKILLS.md`
+- `specialized/partme/software-delivery/SKILLS-EVALUATION-IT.md`
 
 ### 5.2 Global selection rules
 
@@ -470,7 +370,7 @@ That was already true in old OpenClaw multi-gateway setups and remains true for 
 
 ### Software delivery team
 
-Start with `2、Digital Workforce/9、Software & Delivery`:
+Start with `specialized/partme/software-delivery/` (and roster agents under `engineering/`, etc.):
 
 - use `technical-director` as the entry orchestrator
 - use project, product, architecture, frontend, backend, QA, and ops roles as executors
@@ -478,7 +378,7 @@ Start with `2、Digital Workforce/9、Software & Delivery`:
 
 ### Content operations team
 
-Start with `3、Content Ops/<channel>` and deploy the channel pipeline:
+Start with `specialized/partme/content-ops/<channel>` and deploy the channel pipeline:
 
 - first monitoring, breakdown, writing/rewrite, publishing
 - then analytics assistant and comment management
@@ -486,7 +386,7 @@ Start with `3、Content Ops/<channel>` and deploy the channel pipeline:
 
 ### Community and IM operations
 
-Start with `1、IM Channels/<channel>` and split responsibilities into bot development, community operations, and support.
+Start with `specialized/partme/im-channels/<channel>` and split responsibilities into bot development, community operations, and support.
 
 ---
 
@@ -503,11 +403,11 @@ Start with `1、IM Channels/<channel>` and split responsibilities into bot devel
 ### Quick links
 
 - global skills index: `docs/SKILLS-MASTER.md`
-- IM channels overview: `1、IM Channels/README.md`
-- digital workforce overview: `2、Digital Workforce/README.md`
-- content ops overview: `3、Content Ops/README.md`
-- full Xiaohongshu example: `3、Content Ops/xiaohongshu/README.md`
+- IM channels overview: `specialized/partme/im-channels/README.md`
+- digital workforce overview: `specialized/partme/digital-workforce-legacy/README.md`
+- content ops overview: `specialized/partme/content-ops/README.md`
+- full Xiaohongshu example: `specialized/partme/content-ops/xiaohongshu/README.md`
 
 ---
 
-**Last updated**: 2026-04-01
+**Last updated**: 2026-04-12

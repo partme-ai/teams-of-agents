@@ -2,11 +2,7 @@
 
 面向 `OctoClaw / OpenClaw` 生态的智能体工作区仓库，提供可直接复用的角色定义、领域编排方案、渠道运营管线和技能选型文档。
 
-当前仓库已经不是旧版“根目录平铺多个垂直领域”的结构，而是演进为三大分组：
-
-- `1、IM Channels`：面向 Telegram、Discord、Feishu 等 IM 渠道的接入与运营智能体
-- `2、Digital Workforce`：面向企业业务与交付流程的数字员工、专家角色与编排团队
-- `3、Content Ops`：面向各内容平台的内容生产与发布管线
+当前仓库的一级目录与 [agency-agents](https://github.com/msitarzewski/agency-agents) 的智能体分类对齐（如 `engineering/`、`marketing/`、`specialized/` 等）。与 The Agency roster 对应的角色位于相应分类下；PartMe 独有或渠道编排类资产集中在 `specialized/partme/`（含原 IM 渠道说明、内容运营各平台 README/技能索引、交付域遗留文档等）。
 
 > `OctoClaw` 强调零信任、流式执行、边说边执行与企业级安全；本仓库中的智能体定义与技能文档可直接作为 `OctoClaw` 的业务工作区内容，也兼容 OpenClaw 式工作区组织方式。  
 > 参考：`../octoclaw/README.md`、`../octoclaw/README_CN.md`
@@ -18,7 +14,7 @@
 1. [仓库现状总览](#1-仓库现状总览)
 2. [推荐安装方式](#2-推荐安装方式)
 3. [快速接入一个智能体组](#3-快速接入一个智能体组)
-4. [三大分组与代表性智能体](#4-三大分组与代表性智能体)
+4. [分类与代表性智能体](#4-分类与代表性智能体)
 5. [技能体系与安装策略](#5-技能体系与安装策略)
 6. [智能体文档规范](#6-智能体文档规范)
 7. [配置与部署建议](#7-配置与部署建议)
@@ -33,28 +29,37 @@
 
 ```text
 claw-agents/
-├── 1、IM Channels/
-├── 2、Digital Workforce/
-├── 3、Content Ops/
+├── academic/
+├── design/
+├── engineering/
+├── game-development/
+├── marketing/
+├── paid-media/
+├── product/
+├── project-management/
+├── sales/
+├── spatial-computing/
+├── specialized/
+│   └── partme/          # PartMe 独有智能体 + 原三大分组遗留文档（渠道 README、技能索引等）
+├── strategy/
+├── support/
+├── testing/
 ├── config/
 ├── docs/
 └── scripts/
 ```
 
-### 这三个分组分别解决什么问题
+### 分类说明
 
-| 分组 | 目标 | 典型产物 |
-|------|------|----------|
-| `1、IM Channels` | 搭建消息入口、群管理、社区运营、支持响应 | Telegram/Discord/Feishu 智能体组 |
-| `2、Digital Workforce` | 搭建企业内部/外部数字员工与专家网络 | 技术总监团队、Web3 研究团队、客服、教育、销售等 |
-| `3、Content Ops` | 搭建内容运营“七件套”流水线 | 热门监控、爆款拆解、原创/二创、发布、数据复盘、评论管理 |
+| 类型 | 说明 |
+|------|------|
+| 与 Agency roster 对齐的一级目录 | 名称与 `research/agency-agents` 中分类一致；标准角色目录名为 kebab-case slug（如 `marketing/douyin-strategist`）。OpenClaw 转换稿中的 `AGENTS.md` / `IDENTITY.md` / `SOUL.md` 已与源目录对齐合并。 |
+| `specialized/partme/` | 非 roster 或需保留原路径语义的资产（如 `im-channels/`、`content-ops/`、`digital-workforce-legacy/`）；若曾与 roster 目录重名，副本在 `specialized/partme/roster-collision/` 下可追溯。 |
 
-### 与旧文档相比的关键变化
+### 迁移说明
 
-- 根目录已不再以 `it/`、`web3/`、`education/` 等直接平铺。
-- `Software & Delivery`、`Web3`、`Education` 等能力现在归入 `2、Digital Workforce`。
-- 多个内容平台已经形成“渠道 README + 技能索引 + 技能评估”的稳定结构。
-- `IM Channels` 目录实际已有多个渠道树，旧版根文档对其描述明显不完整。
+- 批量迁移由 `scripts/migrate_to_agency_layout.py` 完成（可 `--dry-run` 预览）。
+- 历史文档若仍出现 `1、IM Channels` 等旧路径，请以当前仓库实际目录为准。
 
 ---
 
@@ -134,9 +139,9 @@ npx skills add <owner/repo> --skill <skill-name> -y -g;
 ### 方式一：直接复用仓库目录作为工作区模板
 
 1. 选择一个目录，例如：
-   - `2、Digital Workforce/9、Software & Delivery`
-   - `2、Digital Workforce/10、Web3`
-   - `3、Content Ops/xiaohongshu`
+   - `specialized/partme/software-delivery/`（原 Software & Delivery 文档与 PartMe 角色）
+   - `specialized/partme/web3/`
+   - `specialized/partme/content-ops/xiaohongshu/`
 2. 将目标角色目录复制或软链到实际运行时工作区
 3. 在运行时配置中注册 `agentId`、`workspace`、`agentDir`
 4. 按需启用绑定与 agent-to-agent 委派
@@ -154,7 +159,7 @@ mkdir -p ~/.openclaw/agents/technical-director/sessions
 然后把仓库中的角色定义复制进去：
 
 ```bash
-cp -R "/path/to/claw-agents/2、Digital Workforce/9、Software & Delivery/1-technical-director/"* \
+cp -R "/path/to/claw-agents/specialized/partme/software-delivery/1-technical-director/"* \
   ~/.openclaw/workspace-technical-director/
 ```
 
@@ -192,122 +197,20 @@ openclaw doctor
 
 ---
 
-## 4. 三大分组与代表性智能体
+## 4. 分类与代表性智能体
 
-### 4.1 IM Channels
+### 4.1 与 Agency 对齐的示例路径
 
-目录：`1、IM Channels`
+- 工程与交付：`engineering/frontend-developer`、`engineering/backend-architect`、`engineering/code-reviewer`
+- 增长与内容：`marketing/douyin-strategist`、`marketing/xiaohongshu-specialist`、`marketing/zhihu-strategist`
+- 游戏与媒体：`game-development/unity-architect`、`game-development/godot-gameplay-scripter`
+- 销售与投放：`sales/outbound-strategist`、`paid-media/ppc-campaign-strategist`
 
-当前可见的主要渠道：
+### 4.2 PartMe 扩展（`specialized/partme/`）
 
-- `telegram`
-- `discord`
-- `feishu`
-
-代表性目录示例：
-
-- `1、IM Channels/telegram/1-telegram-bot-developer`
-- `1、IM Channels/telegram/2-telegram-community`
-- `1、IM Channels/telegram/3-telegram-support`
-- `1、IM Channels/discord/1-discord-mod`
-- `1、IM Channels/discord/2-discord-community`
-- `1、IM Channels/discord/3-discord-support`
-
-适合场景：
-
-- 社区维护
-- 群管理与风控
-- 用户支持
-- Bot 开发与自动化运营
-
-### 4.2 Digital Workforce
-
-目录：`2、Digital Workforce`
-
-当前已形成多个企业能力域，例如：
-
-- `1、Company Manger`
-- `2、Sales`
-- `3、Finance & Ops`
-- `4、Game & Media`
-- `5、XR & Spatial`
-- `6、Compliance & Risk`
-- `7、Ad & Creative`
-- `8、Research & Strategy`
-- `9、Software & Delivery`
-- `10、Web3`
-- `11、Customer Service`
-- `12、Education`
-
-其中最典型的两个子域：
-
-**Software & Delivery**
-
-- `1-technical-director`
-- `2-project-manager`
-- `3-product-manager`
-- `10-frontend-engineer`
-- `13-ops-engineer`
-- `backend-architect`
-- `code-reviewer`
-
-这说明仓库已经从“固定 13 角色”扩展为：
-
-- 主干交付团队
-- 补充专家角色
-- 可组合的委派网络
-
-**Web3**
-
-- `0-main`
-- `chain-analyst`
-- `defi-scout`
-
-适合研究、监控、组合分析与专题侦察型场景。
-
-### 4.3 Content Ops
-
-目录：`3、Content Ops`
-
-当前可见的渠道已经明显扩展，至少包括：
-
-- `baidu`
-- `baijiahao`
-- `bilibili`
-- `douyin`
-- `growth`
-- `instagram`
-- `juejin`
-- `kuaishou`
-- `linkedin`
-- `podcast`
-- `reddit`
-- `tiktok`
-- `toutiao`
-- `twitter`
-- `wechat-article`
-- `wechat-video`
-- `weibo`
-- `xiaohongshu`
-- `zhihu`
-
-多数内容平台采用“七件套”或近似流水线结构，例如：
-
-- 热门监控
-- 爆款拆解
-- 二创
-- 原创
-- 发布
-- 数据助手
-- 评论管理
-
-代表性目录示例：
-
-- `3、Content Ops/douyin/1-douyin-specialist`
-- `3、Content Ops/douyin/2-douyin-hot-monitor`
-- `3、Content Ops/douyin/5-douyin-publisher`
-- `3、Content Ops/douyin/douyin-strategist`
-- `3、Content Ops/linkedin/linkedin-content-creator`
+- **IM 渠道智能体与说明**：`specialized/partme/im-channels/discord/`、`telegram/` 等
+- **内容运营渠道索引**：`specialized/partme/content-ops/douyin/`、`xiaohongshu/` 等（各平台 `README.md`、`CLAWHUB-SKILLS.md` 等）
+- **交付与 Web3 等**：`specialized/partme/software-delivery/`、`specialized/partme/web3/`；完整树见 `specialized/partme/digital-workforce-legacy/`
 
 ---
 
@@ -321,9 +224,9 @@ openclaw doctor
 
 **分组级 README**
 
-- `1、IM Channels/README.md`
-- `2、Digital Workforce/README.md`
-- `3、Content Ops/README.md`
+- `specialized/partme/im-channels/README.md`
+- `specialized/partme/digital-workforce-legacy/README.md`
+- `specialized/partme/content-ops/README.md`
 
 **渠道/领域级技能文档**
 
@@ -336,16 +239,14 @@ openclaw doctor
 
 例如：
 
-- `3、Content Ops/xiaohongshu/README.md`
-- `3、Content Ops/xiaohongshu/CLAWHUB-SKILLS.md`
-- `3、Content Ops/xiaohongshu/SKILLS-SH-SKILLS.md`
-- `3、Content Ops/xiaohongshu/SKILLS-EVALUATION.md`
+- `specialized/partme/content-ops/xiaohongshu/README.md`
+- `specialized/partme/content-ops/xiaohongshu/CLAWHUB-SKILLS.md`
+- `specialized/partme/content-ops/xiaohongshu/SKILLS-SH-SKILLS.md`
+- `specialized/partme/content-ops/xiaohongshu/SKILLS-EVALUATION.md`
 
 软件交付子域则有单独口径：
 
-- `2、Digital Workforce/9、Software & Delivery/README.md`
-- `2、Digital Workforce/9、Software & Delivery/IT-SKILLS.md`
-- `2、Digital Workforce/9、Software & Delivery/SKILLS-EVALUATION-IT.md`
+- `specialized/partme/software-delivery/README.md`（及同目录下 `IT-SKILLS.md`、`SKILLS-EVALUATION-IT.md`）
 
 ### 5.2 统一选型原则
 
@@ -470,7 +371,7 @@ openclaw doctor
 
 ### 软件研发团队
 
-推荐从 `2、Digital Workforce/9、Software & Delivery` 开始，使用：
+推荐从 `specialized/partme/software-delivery/`（及 `engineering/` 等 roster 角色）开始，使用：
 
 - `technical-director` 作为入口编排者
 - 项目、产品、架构、前后端、测试、运维为执行角色
@@ -478,7 +379,7 @@ openclaw doctor
 
 ### 内容运营团队
 
-推荐从 `3、Content Ops/<channel>` 开始，按渠道部署七件套：
+推荐从 `specialized/partme/content-ops/<channel>` 开始，按渠道部署七件套：
 
 - 先部署监控、拆解、原创/二创、发布
 - 再加数据助手与评论管理
@@ -486,7 +387,7 @@ openclaw doctor
 
 ### 社群与 IM 运营
 
-推荐从 `1、IM Channels/<channel>` 开始，按 Bot 开发、社区运营、支持响应拆分角色。
+推荐从 `specialized/partme/im-channels/<channel>` 开始，按 Bot 开发、社区运营、支持响应拆分角色。
 
 ---
 
@@ -503,11 +404,11 @@ openclaw doctor
 ### 快速入口
 
 - 总技能索引：`docs/SKILLS-MASTER.md`
-- IM 渠道总览：`1、IM Channels/README.md`
-- 数字员工总览：`2、Digital Workforce/README.md`
-- 内容运营总览：`3、Content Ops/README.md`
-- 小红书完整样板：`3、Content Ops/xiaohongshu/README.md`
+- IM 渠道总览：`specialized/partme/im-channels/README.md`
+- 数字员工总览：`specialized/partme/digital-workforce-legacy/README.md`
+- 内容运营总览：`specialized/partme/content-ops/README.md`
+- 小红书完整样板：`specialized/partme/content-ops/xiaohongshu/README.md`
 
 ---
 
-**最后更新**：2026-04-01
+**最后更新**：2026-04-12

@@ -2,6 +2,8 @@
 
 生成时间：2026-03-15
 
+> **路径说明（2026-04）**：本清单表格中的智能体路径为迁移前目录（`1、IM Channels` / `2、Digital Workforce` / `3、Content Ops`）。仓库已按与 `research/agency-agents` 一致的分类重组；标准角色请按 kebab-case slug 在 `engineering/`、`marketing/` 等一级目录下查找，其余见 `specialized/partme/`。批量迁移脚本：`scripts/migrate_to_agency_layout.py`。
+
 ## 标准 7 件套
 
 | # | 文件名 | 说明 |
