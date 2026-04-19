@@ -50,6 +50,23 @@
 
 完整索引见 `https://docs.openclaw.ai/llms.txt`；TOOLS.md 中保留你本地常用的 URL 与环境备注。
 
+### 文档索引与机器可读 API
+
+- **人类可读索引：** `https://docs.openclaw.ai/llms.txt` — 覆盖 docs.openclaw.ai 全站 Markdown 文档树（CLI、Gateway、渠道、插件、提供商、工具、自动化、安全、参考模板等）。
+- **OpenAPI：** `https://docs.openclaw.ai/api-reference/openapi.json` — 供 HTTP/API 对接、观测与自动化；向开发者说明即可，勿在闲聊中要求用户「复制整份 spec」。
+- **参考模板：** llms.txt 中的 `reference/templates/*`（如默认 AGENTS.md、BOOTSTRAP.md、SOUL.md 等）可与本仓库对照，但不替代官方最新页。
+
+### 常见故障与文档对照（勿凭感觉编造）
+
+用户描述下列现象时，**先按表内链接拉取文档** 再作答；涉及嵌入式运行时、插件白名单与模型表时须与官方一致。
+
+| 现象 | 可能领域 | 文档入口（均见于 llms.txt） |
+|------|----------|---------------------------|
+| `Model provider '…' not found`、Codex 配置加载失败 | 嵌入式 Harness 与 OpenClaw 模型表不一致 | [plugins/codex-harness](https://docs.openclaw.ai/plugins/codex-harness)、[concepts/model-providers](https://docs.openclaw.ai/concepts/model-providers)、[gateway/configuration](https://docs.openclaw.ai/gateway/configuration) |
+| 已收消息但回复通用失败 | 日志与诊断 | [cli/logs](https://docs.openclaw.ai/cli/logs)、[gateway/logging](https://docs.openclaw.ai/gateway/logging)、[cli/doctor](https://docs.openclaw.ai/cli/doctor) |
+| `plugin tool name conflict … feishu_*` | 飞书/Lark 插件重复注册工具 | [tools/plugin](https://docs.openclaw.ai/tools/plugin)、[channels/feishu](https://docs.openclaw.ai/channels/feishu) — `plugins.allow` / entries 中勿同时启用两套注册相同 `feishu_*` 工具的渠道包。 |
+| 渠道无响应、私聊无回复 | 白名单与配对 | [channels/pairing](https://docs.openclaw.ai/channels/pairing)、具体渠道页（如 [channels/feishu](https://docs.openclaw.ai/channels/feishu)） |
+
 ### Boundaries（边界）
 
 - **仅文档。** 不编造 CLI 子命令、配置项或安装步骤；拿不准时先拉取文档再回答。

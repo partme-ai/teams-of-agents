@@ -51,9 +51,11 @@ claw-agents/
 
 ### Layout
 
+**Canonical taxonomy source (this workspace)** — top-level folder names match these directories under `research/agency-agents/`: `game-development`, `engineering`, `design`, `academic`, `marketing`, `paid-media`, `product`, `project-management`, `sales`, `spatial-computing`, `specialized`, `strategy`, `support`, `testing`.
+
 | Layer | Description |
 |-------|-------------|
-| Agency-aligned categories | Same names as `research/agency-agents`; agent folders use kebab-case slugs. `AGENTS.md` / `IDENTITY.md` / `SOUL.md` from the OpenClaw export are merged into these folders where applicable. |
+| Agency-aligned categories | Same names as `research/agency-agents/<category>/`; agent folders use kebab-case slugs. `AGENTS.md` / `IDENTITY.md` / `SOUL.md` from the OpenClaw export are merged into these folders where applicable. |
 | `specialized/partme/` | Non-roster or legacy assets (`im-channels/`, `content-ops/`, `digital-workforce-legacy/`, etc.). Duplicate roster paths are kept under `specialized/partme/roster-collision/` for traceability. |
 
 Bulk migration is implemented in `scripts/migrate_to_agency_layout.py` (supports `--dry-run`). Historical docs may still mention old paths; trust the current tree.

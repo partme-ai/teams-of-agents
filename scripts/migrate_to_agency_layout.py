@@ -13,7 +13,7 @@ import shutil
 import sys
 from pathlib import Path
 
-# 与 agency-agents/scripts/convert.sh 中 AGENT_DIRS 一致
+# 与 research/agency-agents 一级分类一致（同 agency-agents/scripts/convert.sh 的 AGENT_DIRS，并含 strategy）
 AGENT_DIRS = [
     "academic",
     "design",
@@ -28,6 +28,7 @@ AGENT_DIRS = [
     "support",
     "spatial-computing",
     "specialized",
+    "strategy",
 ]
 
 OLD_PREFIXES = ("1、IM Channels", "2、Digital Workforce", "3、Content Ops")
@@ -220,6 +221,9 @@ def merge_openclaw(
     slug_map: dict[str, str],
     dry_run: bool,
 ) -> None:
+    if not openclaw.is_dir():
+        print(f"跳过 openclaw 合并（目录不存在）: {openclaw}", file=sys.stderr)
+        return
     three = ("AGENTS.md", "IDENTITY.md", "SOUL.md")
     for src_dir in sorted(openclaw.iterdir()):
         if not src_dir.is_dir():
@@ -255,7 +259,8 @@ def main() -> None:
     args = ap.parse_args()
 
     claw = Path(__file__).resolve().parent.parent
-    agency = claw.parent.parent / "research" / "agency-agents"
+    # openclaw-agents 与 research/agency-agents 通常同属工作区根目录（workspace-partme-ai/）下
+    agency = claw.parent / "research" / "agency-agents"
     if not agency.is_dir():
         agency = Path("/home/wandl/workspaces/workspace-partme-ai/research/agency-agents")
     openclaw = agency / "integrations" / "openclaw"

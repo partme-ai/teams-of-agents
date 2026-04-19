@@ -51,9 +51,13 @@ claw-agents/
 
 ### 分类说明
 
+**Taxonomy 源（本工作区）**：一级目录名称与下列路径下的文件夹一一对应，新增或调整分类时请优先以其中 Markdown roster（`name:` 前言）为准：
+
+`research/agency-agents/game-development`、`engineering`、`design`、`academic`、`marketing`、`paid-media`、`product`、`project-management`、`sales`、`spatial-computing`、`specialized`、`strategy`、`support`、`testing`。
+
 | 类型 | 说明 |
 |------|------|
-| 与 Agency roster 对齐的一级目录 | 名称与 `research/agency-agents` 中分类一致；标准角色目录名为 kebab-case slug（如 `marketing/douyin-strategist`）。OpenClaw 转换稿中的 `AGENTS.md` / `IDENTITY.md` / `SOUL.md` 已与源目录对齐合并。 |
+| 与 Agency roster 对齐的一级目录 | 名称与上表 `research/agency-agents/<分类>/` 一致；标准角色目录名为 kebab-case slug（如 `marketing/douyin-strategist`）。OpenClaw 转换稿中的 `AGENTS.md` / `IDENTITY.md` / `SOUL.md` 已与源目录对齐合并。 |
 | `specialized/partme/` | 非 roster 或需保留原路径语义的资产（如 `im-channels/`、`content-ops/`、`digital-workforce-legacy/`）；若曾与 roster 目录重名，副本在 `specialized/partme/roster-collision/` 下可追溯。 |
 
 ### 迁移说明
