@@ -82,17 +82,29 @@ npx skills add piekill/xiaohongshu-summarizer-skill --skill xiaohongshu-search-s
 **Baoyu 系列（与 xiaohongshu 预设技能表一致，后补方案）：**
 
 ```bash
+npx skills add jimliu/baoyu-skills --skill baoyu-slide-deck -y -g;
 npx skills add jimliu/baoyu-skills --skill baoyu-url-to-markdown -y -g;
+npx skills add jimliu/baoyu-skills --skill baoyu-infographic -y -g;
+npx skills add jimliu/baoyu-skills --skill baoyu-post-to-x -y -g;
+npx skills add jimliu/baoyu-skills --skill baoyu-danger-x-to-markdown -y -g;
 npx skills add jimliu/baoyu-skills --skill baoyu-format-markdown -y -g;
 npx skills add jimliu/baoyu-skills --skill baoyu-xhs-images -y -g;
 npx skills add jimliu/baoyu-skills --skill baoyu-cover-image -y -g;
 npx skills add jimliu/baoyu-skills --skill baoyu-article-illustrator -y -g;
 npx skills add jimliu/baoyu-skills --skill baoyu-compress-image -y -g;
 npx skills add jimliu/baoyu-skills --skill baoyu-image-gen -y -g;
+
+npx skills add jimliu/baoyu-skills --skill baoyu-imagine -y -g;
+npx skills add jimliu/baoyu-skills --skill baoyu-image-cards -y -g;
 npx skills add jimliu/baoyu-skills --skill baoyu-slide-deck -y -g;
 npx skills add jimliu/baoyu-skills --skill baoyu-infographic -y -g;
 npx skills add jimliu/baoyu-skills --skill baoyu-comic -y -g;
 npx skills add jimliu/baoyu-skills --skill baoyu-translate -y -g;
+
+npx skills add jimliu/baoyu-skills --skill baoyu-youtube-transcript -y -g;
+npx skills add jimliu/baoyu-skills --skill baoyu-markdown-to-html -y -g;
+
+
 ```
 
 若 CLI 为 `npx skillsadd`（无空格），则：
