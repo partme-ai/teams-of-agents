@@ -1,76 +1,95 @@
-### gradle ###
-.gradle
-/build/
-!gradle/wrapper/gradle-wrapper.jar
+target/
+bin/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+.flattened-pom.xml
+.fastRequest
+Cargo.lock
+*.swp
+*.swo
 
 ### STS ###
-.settings/
 .apt_generated
 .classpath
 .factorypath
 .project
 .settings
 .springBeans
-bin/
-codes/
+.sts4-cache
+rebel.xml
 
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
-*.gz
-rebel.xml
 
 ### NetBeans ###
-nbproject/private/
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 build/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
-log.*/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+.claude/
+
+### Mac OS ###
+.DS_Store
+
+**/dependency-reduced-pom.xml
+
+### Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+### Docs
+docs/_build
+.venv/
+
+
+# vibe coding
+.claude
+openspec
+AGENTS.md
+CLAUDE.md
+
+##Log
 logs/
 
-### maven ###
-target/
-*.war
-*.ear
-*.tar
-#*.zip
-*.tar.gz
+## Frontend (all frontend/ directories across examples and extensions)
+# Dependencies
+**/node_modules/
+# Build output
+**/dist/
+**/build/
+**/.output/
+# Vite / bundler caches
+**/.vite/
+**/.cache/
+**/.parcel-cache/
+# Type-check / tsc output
+**/*.tsbuildinfo
+# Env files (may contain secrets)
+**/.env.local
+**/.env.*.local
+# Coverage
+**/coverage/
+# Storybook
+**/storybook-static/
+# boba-tea-shop: generated static assets served by the supervisor-agent
+**/boba-tea-shop/supervisor-agent/**/static/
 
-### logs ####
-/logs/
-*.log
+##agentscope
+.agentscope/
 
-### temp ignore ###
-*.cache
-*.diff
-*.patch
-*.tmp
-*.java~
-*.properties~
-*.xml~
+## harness db
+**/*.db
 
-### system ignore ###
-.DS_Store
-Thumbs.db
-Servers
-.metadata
-upload
-gen_code
-
-### node ###
-node_modules
-pom.xml.versionsBackup
-/server/nacos-server/data
-/server/nacos-server/logs
-!/libs/*.jar
-
-.fastRequest
-*.http
-.flattened-pom.xml
-qodana.yaml
-/.vscode/
-/.aliyun/
